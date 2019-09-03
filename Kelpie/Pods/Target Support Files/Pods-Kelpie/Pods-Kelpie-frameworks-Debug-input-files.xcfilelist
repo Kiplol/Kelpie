@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Kelpie/Pods-Kelpie-frameworks.sh
+${BUILT_PRODUCTS_DIR}/KeyboardObserver/KeyboardObserver.framework
+${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework
+${BUILT_PRODUCTS_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework

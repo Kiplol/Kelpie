@@ -1,0 +1,24 @@
+PODS:
+  - KeyboardObserver (2.1.0)
+  - SPStorkController (1.7.6)
+  - VegaScrollFlowLayout (1.1)
+
+DEPENDENCIES:
+  - KeyboardObserver (~> 2.1)
+  - SPStorkController
+  - VegaScrollFlowLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KeyboardObserver
+    - SPStorkController
+    - VegaScrollFlowLayout
+
+SPEC CHECKSUMS:
+  KeyboardObserver: 338f87db88f4d6f4b4af334fe025bc824251d57b
+  SPStorkController: 6d0d0716a4e9e8245aa80715ffc57491b428569e
+  VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
+
+PODFILE CHECKSUM: b6dc1b102efcf406084d9496e057818b0e880d43
+
+COCOAPODS: 1.7.5

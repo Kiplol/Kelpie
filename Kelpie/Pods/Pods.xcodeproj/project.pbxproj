@@ -1,0 +1,1027 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01A2C09DD41BB4077FB0AC7933912043 /* SPStorkViewControllerExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3D356ECEE15A34D3B787635C3152 /* SPStorkViewControllerExtenshion.swift */; };
+		1E0C73A80A9F07F78DD476B48CBEB6AE /* VegaScrollFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A339F50168F70D9D5ED0551243E21 /* VegaScrollFlowLayout.swift */; };
+		34F116F35A1DDF7133206046EFAA7BB7 /* SPStorkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955C9F74FC5A1EAEC16815EE506989E /* SPStorkIndicatorView.swift */; };
+		3D1336606F0F8D4B32F10A705134AB61 /* Pods-Kelpie-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB4A25B163E1719C44567B05FB9753AD /* Pods-Kelpie-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538650345A53DA9C22A06B14EBC3354A /* SPStorkSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5761FB4FECA9E969AC3FA190E9D8D9 /* SPStorkSeque.swift */; };
+		7113990EADDCBCF82B361D88FCED2953 /* VegaScrollFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 302583BAD76394A17C38766BA096C1E9 /* VegaScrollFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77878A5F2CC1AF2C700E159A77BB39B1 /* SPStorkHaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5BADA6EAF9C522C6615A0B48DE653B /* SPStorkHaptic.swift */; };
+		940CDA53E5EF0C9F1E9B506B610EEE5B /* SPStorkPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E605838B90330B3FF2C00262E02C63 /* SPStorkPresentationController.swift */; };
+		A3D56AEB71F5D76AD5691FE23A770298 /* SPStorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9365F023E413BA84BEE311754CEF4 /* SPStorkController.swift */; };
+		AFE918354E105A305EE95C202806F49A /* SPStorkCloseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF974778DE933076A06D24795A3CC2DF /* SPStorkCloseView.swift */; };
+		B1609F15EDA5CABE7C39C47EAB55A060 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		B1FFE5DC48CED21CF4CE8E020EA27CA7 /* SPStorkCodeDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE3F9B4EF5409B76053A8B86D309C2 /* SPStorkCodeDraw.swift */; };
+		B293982645E0D238781C47BB6D4459D9 /* VegaScrollFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6D91DAC1C1216D78DD9447AB39B192 /* VegaScrollFlowLayout-dummy.m */; };
+		B3417F6C24BF0035E66B0983E2655CA3 /* SPStorkController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7088489CEF4B5CF357687640DE569717 /* SPStorkController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6B204D69E4E59DD889AA8EA8D394901 /* KeyboardObserver-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9E10D6A930B8CF04D371FC85272419 /* KeyboardObserver-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9E482FD36C52333B4463F62A5956D90 /* SPStorkController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B9F4C7D3AF2977CDF662A06038D38A /* SPStorkController-dummy.m */; };
+		BD38219B703358525E58C8E82B92CB22 /* KeyboardObserver-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BCDDA5B6EDA43D5AEC598C16F74DE3 /* KeyboardObserver-dummy.m */; };
+		BF1B6B8E68CC3B03FCE714FA78437343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		C2F22EA96169C5E8A89237C0C96631B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		C9B27C4AF5CF8DD4E031883C8781B835 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		CF2D525203106AC22045A81ABE9498E1 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A1336E5CA95613809446F33C6DFEA /* KeyboardObserver.swift */; };
+		DBE71DA84B9532374EDC7795E761CE43 /* SPStorkTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4840CB4FD8C26B06736D6B6E10994AA /* SPStorkTransitioningDelegate.swift */; };
+		E396B6EAFF9BA8016B1BEEB6B7F1F92B /* Pods-Kelpie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B00C458AF249E4CD7775E9558E77A4 /* Pods-Kelpie-dummy.m */; };
+		E648DE18ED39BFB8A22CD01DE189858B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		E84600FFD85E426B8B24E0CA1ECE6BD9 /* SPStorkPresentingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7529F947F9EAE6DCC32AEA32C541509 /* SPStorkPresentingAnimationController.swift */; };
+		EAA8AEF9FA61F44F6CC4396A4CAC6E4F /* SPStorkControllerConfirmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332631930D28EC93C32E49B69009183 /* SPStorkControllerConfirmDelegate.swift */; };
+		F273A04C9ED09F735BCA2C506D6B028A /* SPStorkCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE073686A9F035280674072D9323085 /* SPStorkCloseButton.swift */; };
+		F49584EDCFE74AD53809B7BC42CA0E38 /* SPStorkControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9A695B70ECB5131E1BF6925D80057 /* SPStorkControllerDelegate.swift */; };
+		F8F592E70D99DD27964FC96E0FA24FC5 /* SPStorkDismissingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AB10856EA1CFCCA9EC7A53FC1E126 /* SPStorkDismissingAnimationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A0F206B8B70524C1415F3E1266C06CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C31733F7FA33CB2D9790CB2C7F741F1;
+			remoteInfo = KeyboardObserver;
+		};
+		B3A368A361528E43A03FB09F865A4457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81E95886B4E31CDABBDB7AF092755E05;
+			remoteInfo = SPStorkController;
+		};
+		C6B8AD3896D1D17B73D8D08337F11DE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6738B61255F4E5F64DBC885C2955BE0F;
+			remoteInfo = VegaScrollFlowLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		049A1336E5CA95613809446F33C6DFEA /* KeyboardObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = KeyboardObserver/KeyboardObserver.swift; sourceTree = "<group>"; };
+		05B00C458AF249E4CD7775E9558E77A4 /* Pods-Kelpie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kelpie-dummy.m"; sourceTree = "<group>"; };
+		064DB4E3BDD63E2E29702CF67EDD78E6 /* Pods_Kelpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kelpie.framework; path = "Pods-Kelpie.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E605838B90330B3FF2C00262E02C63 /* SPStorkPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkPresentationController.swift; path = Source/SPStorkController/TransitioningDelegate/SPStorkPresentationController.swift; sourceTree = "<group>"; };
+		1AE9365F023E413BA84BEE311754CEF4 /* SPStorkController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkController.swift; path = Source/SPStorkController/SPStorkController.swift; sourceTree = "<group>"; };
+		1B11AF28FB2116EF4B6E72E15E8511FE /* VegaScrollFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VegaScrollFlowLayout.framework; path = VegaScrollFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5680DDC293692A324AFEBFE5CDE105 /* Pods-Kelpie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kelpie.modulemap"; sourceTree = "<group>"; };
+		1F1B02B4D98077E7B1975B7AD6B1FD5C /* Pods-Kelpie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kelpie.debug.xcconfig"; sourceTree = "<group>"; };
+		2332631930D28EC93C32E49B69009183 /* SPStorkControllerConfirmDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkControllerConfirmDelegate.swift; path = Source/SPStorkController/Protocols/SPStorkControllerConfirmDelegate.swift; sourceTree = "<group>"; };
+		302583BAD76394A17C38766BA096C1E9 /* VegaScrollFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VegaScrollFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		39AAAFDAE69218240BA2714BF807DE1B /* Pods-Kelpie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kelpie-Info.plist"; sourceTree = "<group>"; };
+		4133B04FE5F21C2C6583D611EED91149 /* SPStorkController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPStorkController-prefix.pch"; sourceTree = "<group>"; };
+		41848E9D09234E184415E3622B1091BE /* Pods-Kelpie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kelpie.release.xcconfig"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D5128EA7CC94C59CFD0593B10E678ED /* SPStorkController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SPStorkController-Info.plist"; sourceTree = "<group>"; };
+		52BCDDA5B6EDA43D5AEC598C16F74DE3 /* KeyboardObserver-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeyboardObserver-dummy.m"; sourceTree = "<group>"; };
+		54789F9D93DBDF95A97C64FE4C6B5A1F /* VegaScrollFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VegaScrollFlowLayout.modulemap; sourceTree = "<group>"; };
+		5FDE3F9B4EF5409B76053A8B86D309C2 /* SPStorkCodeDraw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkCodeDraw.swift; path = Source/SPStorkController/CodeDraw/SPStorkCodeDraw.swift; sourceTree = "<group>"; };
+		6087D56135FE62DEC7231246929245C4 /* KeyboardObserver.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeyboardObserver.modulemap; sourceTree = "<group>"; };
+		630E3D356ECEE15A34D3B787635C3152 /* SPStorkViewControllerExtenshion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkViewControllerExtenshion.swift; path = Source/SPStorkController/Extenshion/SPStorkViewControllerExtenshion.swift; sourceTree = "<group>"; };
+		68D9A695B70ECB5131E1BF6925D80057 /* SPStorkControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkControllerDelegate.swift; path = Source/SPStorkController/Protocols/SPStorkControllerDelegate.swift; sourceTree = "<group>"; };
+		6B10F7D2AC0F6D5E1AA69710DCFE749C /* SPStorkController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SPStorkController.modulemap; sourceTree = "<group>"; };
+		7088489CEF4B5CF357687640DE569717 /* SPStorkController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPStorkController-umbrella.h"; sourceTree = "<group>"; };
+		7416B451D935EAFC8EFA49828E756736 /* VegaScrollFlowLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VegaScrollFlowLayout-Info.plist"; sourceTree = "<group>"; };
+		78C82439BCCAF78EF0E163552F877433 /* KeyboardObserver-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeyboardObserver-Info.plist"; sourceTree = "<group>"; };
+		7A79A92A1F194150FB99D0EC93AA126F /* KeyboardObserver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeyboardObserver.framework; path = KeyboardObserver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B08C12E8DF42F0C6FEC341B93E4584E /* Pods-Kelpie-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kelpie-frameworks.sh"; sourceTree = "<group>"; };
+		8C8D3E7DAC4A6F7D93BEE7C98A601DC9 /* SPStorkController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPStorkController.framework; path = SPStorkController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		917824AB50809A69D42893ED6E301EB1 /* KeyboardObserver.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeyboardObserver.xcconfig; sourceTree = "<group>"; };
+		926AB10856EA1CFCCA9EC7A53FC1E126 /* SPStorkDismissingAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkDismissingAnimationController.swift; path = Source/SPStorkController/TransitioningDelegate/SPStorkDismissingAnimationController.swift; sourceTree = "<group>"; };
+		926B1E70C367334D350322B1FF9F4BBE /* KeyboardObserver-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardObserver-prefix.pch"; sourceTree = "<group>"; };
+		93899D1AE8B10059864E31E7F3B276ED /* Pods-Kelpie-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kelpie-acknowledgements.plist"; sourceTree = "<group>"; };
+		96D1DF9B8E5604B61ED5E9DF277592F5 /* Pods-Kelpie-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kelpie-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C5BADA6EAF9C522C6615A0B48DE653B /* SPStorkHaptic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkHaptic.swift; path = Source/SPStorkController/Models/SPStorkHaptic.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4840CB4FD8C26B06736D6B6E10994AA /* SPStorkTransitioningDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkTransitioningDelegate.swift; path = Source/SPStorkController/TransitioningDelegate/SPStorkTransitioningDelegate.swift; sourceTree = "<group>"; };
+		AD5A339F50168F70D9D5ED0551243E21 /* VegaScrollFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VegaScrollFlowLayout.swift; path = VegaScroll/Classes/VegaScrollFlowLayout.swift; sourceTree = "<group>"; };
+		AF974778DE933076A06D24795A3CC2DF /* SPStorkCloseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkCloseView.swift; path = Source/SPStorkController/Views/SPStorkCloseView.swift; sourceTree = "<group>"; };
+		B3E12B1D557B9670D3DD3E6D66A4926A /* VegaScrollFlowLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VegaScrollFlowLayout.xcconfig; sourceTree = "<group>"; };
+		B7529F947F9EAE6DCC32AEA32C541509 /* SPStorkPresentingAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkPresentingAnimationController.swift; path = Source/SPStorkController/TransitioningDelegate/SPStorkPresentingAnimationController.swift; sourceTree = "<group>"; };
+		B8B9F4C7D3AF2977CDF662A06038D38A /* SPStorkController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPStorkController-dummy.m"; sourceTree = "<group>"; };
+		BA5761FB4FECA9E969AC3FA190E9D8D9 /* SPStorkSeque.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkSeque.swift; path = Source/SPStorkController/SPStorkSeque.swift; sourceTree = "<group>"; };
+		BB4A25B163E1719C44567B05FB9753AD /* Pods-Kelpie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kelpie-umbrella.h"; sourceTree = "<group>"; };
+		BCB6951C0DFC7BE0766F4B3D5A2361B3 /* SPStorkController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPStorkController.xcconfig; sourceTree = "<group>"; };
+		C955C9F74FC5A1EAEC16815EE506989E /* SPStorkIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkIndicatorView.swift; path = Source/SPStorkController/Views/SPStorkIndicatorView.swift; sourceTree = "<group>"; };
+		CB9E10D6A930B8CF04D371FC85272419 /* KeyboardObserver-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardObserver-umbrella.h"; sourceTree = "<group>"; };
+		CCE073686A9F035280674072D9323085 /* SPStorkCloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPStorkCloseButton.swift; path = Source/SPStorkController/Views/SPStorkCloseButton.swift; sourceTree = "<group>"; };
+		DCBC023D33F0923F0E1AA1180EED7BA0 /* VegaScrollFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VegaScrollFlowLayout-prefix.pch"; sourceTree = "<group>"; };
+		FD6D91DAC1C1216D78DD9447AB39B192 /* VegaScrollFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VegaScrollFlowLayout-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2001CDF1474A4DBD9859305825143641 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B27C4AF5CF8DD4E031883C8781B835 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4724D3478AC98BDBDBC12FA562826D5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1B6B8E68CC3B03FCE714FA78437343 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81CBF884371F5589EF4D203FAC34778F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F22EA96169C5E8A89237C0C96631B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBF32CB37667503308C0159597AE5D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1609F15EDA5CABE7C39C47EAB55A060 /* Foundation.framework in Frameworks */,
+				E648DE18ED39BFB8A22CD01DE189858B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09548D434762039B27C1C556279709B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A79A92A1F194150FB99D0EC93AA126F /* KeyboardObserver.framework */,
+				064DB4E3BDD63E2E29702CF67EDD78E6 /* Pods_Kelpie.framework */,
+				8C8D3E7DAC4A6F7D93BEE7C98A601DC9 /* SPStorkController.framework */,
+				1B11AF28FB2116EF4B6E72E15E8511FE /* VegaScrollFlowLayout.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C6B49A1331E1B5B512ADB91379A969E /* KeyboardObserver */ = {
+			isa = PBXGroup;
+			children = (
+				049A1336E5CA95613809446F33C6DFEA /* KeyboardObserver.swift */,
+				57E66D68CD14183C5CD4A4017D9AEFDB /* Support Files */,
+			);
+			name = KeyboardObserver;
+			path = KeyboardObserver;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B3FE07BD5B3C1C09C5D7F6F3675B4F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C6B49A1331E1B5B512ADB91379A969E /* KeyboardObserver */,
+				2E49A73446C8DC3F999639B9BA3BFBC6 /* SPStorkController */,
+				54522D3A6C03134306ACEB72CB0A26A7 /* VegaScrollFlowLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E49A73446C8DC3F999639B9BA3BFBC6 /* SPStorkController */ = {
+			isa = PBXGroup;
+			children = (
+				CCE073686A9F035280674072D9323085 /* SPStorkCloseButton.swift */,
+				AF974778DE933076A06D24795A3CC2DF /* SPStorkCloseView.swift */,
+				5FDE3F9B4EF5409B76053A8B86D309C2 /* SPStorkCodeDraw.swift */,
+				1AE9365F023E413BA84BEE311754CEF4 /* SPStorkController.swift */,
+				2332631930D28EC93C32E49B69009183 /* SPStorkControllerConfirmDelegate.swift */,
+				68D9A695B70ECB5131E1BF6925D80057 /* SPStorkControllerDelegate.swift */,
+				926AB10856EA1CFCCA9EC7A53FC1E126 /* SPStorkDismissingAnimationController.swift */,
+				9C5BADA6EAF9C522C6615A0B48DE653B /* SPStorkHaptic.swift */,
+				C955C9F74FC5A1EAEC16815EE506989E /* SPStorkIndicatorView.swift */,
+				12E605838B90330B3FF2C00262E02C63 /* SPStorkPresentationController.swift */,
+				B7529F947F9EAE6DCC32AEA32C541509 /* SPStorkPresentingAnimationController.swift */,
+				BA5761FB4FECA9E969AC3FA190E9D8D9 /* SPStorkSeque.swift */,
+				A4840CB4FD8C26B06736D6B6E10994AA /* SPStorkTransitioningDelegate.swift */,
+				630E3D356ECEE15A34D3B787635C3152 /* SPStorkViewControllerExtenshion.swift */,
+				AE07DB23BA82C7D1C6D19B2DB2602C06 /* Support Files */,
+			);
+			name = SPStorkController;
+			path = SPStorkController;
+			sourceTree = "<group>";
+		};
+		301329D663270A6823F6CB833FFE431D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				54789F9D93DBDF95A97C64FE4C6B5A1F /* VegaScrollFlowLayout.modulemap */,
+				B3E12B1D557B9670D3DD3E6D66A4926A /* VegaScrollFlowLayout.xcconfig */,
+				FD6D91DAC1C1216D78DD9447AB39B192 /* VegaScrollFlowLayout-dummy.m */,
+				7416B451D935EAFC8EFA49828E756736 /* VegaScrollFlowLayout-Info.plist */,
+				DCBC023D33F0923F0E1AA1180EED7BA0 /* VegaScrollFlowLayout-prefix.pch */,
+				302583BAD76394A17C38766BA096C1E9 /* VegaScrollFlowLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VegaScrollFlowLayout";
+			sourceTree = "<group>";
+		};
+		54522D3A6C03134306ACEB72CB0A26A7 /* VegaScrollFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AD5A339F50168F70D9D5ED0551243E21 /* VegaScrollFlowLayout.swift */,
+				301329D663270A6823F6CB833FFE431D /* Support Files */,
+			);
+			name = VegaScrollFlowLayout;
+			path = VegaScrollFlowLayout;
+			sourceTree = "<group>";
+		};
+		57E66D68CD14183C5CD4A4017D9AEFDB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6087D56135FE62DEC7231246929245C4 /* KeyboardObserver.modulemap */,
+				917824AB50809A69D42893ED6E301EB1 /* KeyboardObserver.xcconfig */,
+				52BCDDA5B6EDA43D5AEC598C16F74DE3 /* KeyboardObserver-dummy.m */,
+				78C82439BCCAF78EF0E163552F877433 /* KeyboardObserver-Info.plist */,
+				926B1E70C367334D350322B1FF9F4BBE /* KeyboardObserver-prefix.pch */,
+				CB9E10D6A930B8CF04D371FC85272419 /* KeyboardObserver-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeyboardObserver";
+			sourceTree = "<group>";
+		};
+		658CACD5D829E6E9217C9BB02642DAC0 /* Pods-Kelpie */ = {
+			isa = PBXGroup;
+			children = (
+				1E5680DDC293692A324AFEBFE5CDE105 /* Pods-Kelpie.modulemap */,
+				96D1DF9B8E5604B61ED5E9DF277592F5 /* Pods-Kelpie-acknowledgements.markdown */,
+				93899D1AE8B10059864E31E7F3B276ED /* Pods-Kelpie-acknowledgements.plist */,
+				05B00C458AF249E4CD7775E9558E77A4 /* Pods-Kelpie-dummy.m */,
+				8B08C12E8DF42F0C6FEC341B93E4584E /* Pods-Kelpie-frameworks.sh */,
+				39AAAFDAE69218240BA2714BF807DE1B /* Pods-Kelpie-Info.plist */,
+				BB4A25B163E1719C44567B05FB9753AD /* Pods-Kelpie-umbrella.h */,
+				1F1B02B4D98077E7B1975B7AD6B1FD5C /* Pods-Kelpie.debug.xcconfig */,
+				41848E9D09234E184415E3622B1091BE /* Pods-Kelpie.release.xcconfig */,
+			);
+			name = "Pods-Kelpie";
+			path = "Target Support Files/Pods-Kelpie";
+			sourceTree = "<group>";
+		};
+		AE07DB23BA82C7D1C6D19B2DB2602C06 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B10F7D2AC0F6D5E1AA69710DCFE749C /* SPStorkController.modulemap */,
+				BCB6951C0DFC7BE0766F4B3D5A2361B3 /* SPStorkController.xcconfig */,
+				B8B9F4C7D3AF2977CDF662A06038D38A /* SPStorkController-dummy.m */,
+				4D5128EA7CC94C59CFD0593B10E678ED /* SPStorkController-Info.plist */,
+				4133B04FE5F21C2C6583D611EED91149 /* SPStorkController-prefix.pch */,
+				7088489CEF4B5CF357687640DE569717 /* SPStorkController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SPStorkController";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				2B3FE07BD5B3C1C09C5D7F6F3675B4F5 /* Pods */,
+				09548D434762039B27C1C556279709B9 /* Products */,
+				F4F0C2F669B820D3346D1F4E8186B238 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F4F0C2F669B820D3346D1F4E8186B238 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				658CACD5D829E6E9217C9BB02642DAC0 /* Pods-Kelpie */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		030FE9457BC7EA20305D128E2EA02BBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1336606F0F8D4B32F10A705134AB61 /* Pods-Kelpie-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		297DF0E0BBDCFCA3630EDFBF006471FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3417F6C24BF0035E66B0983E2655CA3 /* SPStorkController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06C453A12853C3739CA89F7D89F163C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6B204D69E4E59DD889AA8EA8D394901 /* KeyboardObserver-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C5F612486D0AF176750FF004075CFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7113990EADDCBCF82B361D88FCED2953 /* VegaScrollFlowLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6738B61255F4E5F64DBC885C2955BE0F /* VegaScrollFlowLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4ABB816AB029C80F690D4E5200B58F9 /* Build configuration list for PBXNativeTarget "VegaScrollFlowLayout" */;
+			buildPhases = (
+				F1C5F612486D0AF176750FF004075CFA /* Headers */,
+				966C1BD2F6EF035DC6CCFC1380FE4B78 /* Sources */,
+				4724D3478AC98BDBDBC12FA562826D5D /* Frameworks */,
+				6B62542F3F3CF4CE4E4154A80E27F8ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VegaScrollFlowLayout;
+			productName = VegaScrollFlowLayout;
+			productReference = 1B11AF28FB2116EF4B6E72E15E8511FE /* VegaScrollFlowLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C31733F7FA33CB2D9790CB2C7F741F1 /* KeyboardObserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6FBE32A62BBE272DE3619F15A047B71 /* Build configuration list for PBXNativeTarget "KeyboardObserver" */;
+			buildPhases = (
+				F06C453A12853C3739CA89F7D89F163C /* Headers */,
+				81ED719F0220BBF5C087362BB4F36A44 /* Sources */,
+				2001CDF1474A4DBD9859305825143641 /* Frameworks */,
+				24EAD753A971AB745F7B891CE38B631F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboardObserver;
+			productName = KeyboardObserver;
+			productReference = 7A79A92A1F194150FB99D0EC93AA126F /* KeyboardObserver.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81E95886B4E31CDABBDB7AF092755E05 /* SPStorkController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB85F351BAF3FD088B02C53CC285742 /* Build configuration list for PBXNativeTarget "SPStorkController" */;
+			buildPhases = (
+				297DF0E0BBDCFCA3630EDFBF006471FB /* Headers */,
+				A44532EEF81C2BCE9A263B6260EC9C4C /* Sources */,
+				CBF32CB37667503308C0159597AE5D40 /* Frameworks */,
+				EFD3C04E824C0E381AE9B546C0BBB363 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPStorkController;
+			productName = SPStorkController;
+			productReference = 8C8D3E7DAC4A6F7D93BEE7C98A601DC9 /* SPStorkController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC3B89E64C3289117AB2807CC4E46A53 /* Pods-Kelpie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A23CF20DBB2A38EB769966E64AA4687 /* Build configuration list for PBXNativeTarget "Pods-Kelpie" */;
+			buildPhases = (
+				030FE9457BC7EA20305D128E2EA02BBA /* Headers */,
+				E1EDC88431CFD608128B74611C885217 /* Sources */,
+				81CBF884371F5589EF4D203FAC34778F /* Frameworks */,
+				470566C336C89BFDF0812536B6CC067C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19084AC70E2A4D56B674C5914E724582 /* PBXTargetDependency */,
+				A9D4674BD3C846F3BB926B08B8C24A5E /* PBXTargetDependency */,
+				2BF6927221B4C841A1A58C28052F1289 /* PBXTargetDependency */,
+			);
+			name = "Pods-Kelpie";
+			productName = "Pods-Kelpie";
+			productReference = 064DB4E3BDD63E2E29702CF67EDD78E6 /* Pods_Kelpie.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 09548D434762039B27C1C556279709B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C31733F7FA33CB2D9790CB2C7F741F1 /* KeyboardObserver */,
+				BC3B89E64C3289117AB2807CC4E46A53 /* Pods-Kelpie */,
+				81E95886B4E31CDABBDB7AF092755E05 /* SPStorkController */,
+				6738B61255F4E5F64DBC885C2955BE0F /* VegaScrollFlowLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24EAD753A971AB745F7B891CE38B631F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		470566C336C89BFDF0812536B6CC067C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B62542F3F3CF4CE4E4154A80E27F8ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD3C04E824C0E381AE9B546C0BBB363 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81ED719F0220BBF5C087362BB4F36A44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD38219B703358525E58C8E82B92CB22 /* KeyboardObserver-dummy.m in Sources */,
+				CF2D525203106AC22045A81ABE9498E1 /* KeyboardObserver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		966C1BD2F6EF035DC6CCFC1380FE4B78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B293982645E0D238781C47BB6D4459D9 /* VegaScrollFlowLayout-dummy.m in Sources */,
+				1E0C73A80A9F07F78DD476B48CBEB6AE /* VegaScrollFlowLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44532EEF81C2BCE9A263B6260EC9C4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F273A04C9ED09F735BCA2C506D6B028A /* SPStorkCloseButton.swift in Sources */,
+				AFE918354E105A305EE95C202806F49A /* SPStorkCloseView.swift in Sources */,
+				B1FFE5DC48CED21CF4CE8E020EA27CA7 /* SPStorkCodeDraw.swift in Sources */,
+				B9E482FD36C52333B4463F62A5956D90 /* SPStorkController-dummy.m in Sources */,
+				A3D56AEB71F5D76AD5691FE23A770298 /* SPStorkController.swift in Sources */,
+				EAA8AEF9FA61F44F6CC4396A4CAC6E4F /* SPStorkControllerConfirmDelegate.swift in Sources */,
+				F49584EDCFE74AD53809B7BC42CA0E38 /* SPStorkControllerDelegate.swift in Sources */,
+				F8F592E70D99DD27964FC96E0FA24FC5 /* SPStorkDismissingAnimationController.swift in Sources */,
+				77878A5F2CC1AF2C700E159A77BB39B1 /* SPStorkHaptic.swift in Sources */,
+				34F116F35A1DDF7133206046EFAA7BB7 /* SPStorkIndicatorView.swift in Sources */,
+				940CDA53E5EF0C9F1E9B506B610EEE5B /* SPStorkPresentationController.swift in Sources */,
+				E84600FFD85E426B8B24E0CA1ECE6BD9 /* SPStorkPresentingAnimationController.swift in Sources */,
+				538650345A53DA9C22A06B14EBC3354A /* SPStorkSeque.swift in Sources */,
+				DBE71DA84B9532374EDC7795E761CE43 /* SPStorkTransitioningDelegate.swift in Sources */,
+				01A2C09DD41BB4077FB0AC7933912043 /* SPStorkViewControllerExtenshion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1EDC88431CFD608128B74611C885217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E396B6EAFF9BA8016B1BEEB6B7F1F92B /* Pods-Kelpie-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19084AC70E2A4D56B674C5914E724582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeyboardObserver;
+			target = 6C31733F7FA33CB2D9790CB2C7F741F1 /* KeyboardObserver */;
+			targetProxy = 1A0F206B8B70524C1415F3E1266C06CE /* PBXContainerItemProxy */;
+		};
+		2BF6927221B4C841A1A58C28052F1289 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VegaScrollFlowLayout;
+			target = 6738B61255F4E5F64DBC885C2955BE0F /* VegaScrollFlowLayout */;
+			targetProxy = C6B8AD3896D1D17B73D8D08337F11DE9 /* PBXContainerItemProxy */;
+		};
+		A9D4674BD3C846F3BB926B08B8C24A5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPStorkController;
+			target = 81E95886B4E31CDABBDB7AF092755E05 /* SPStorkController */;
+			targetProxy = B3A368A361528E43A03FB09F865A4457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AAD8F5AC178CE3DC17E779F59C718DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41848E9D09234E184415E3622B1091BE /* Pods-Kelpie.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kelpie/Pods-Kelpie-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kelpie/Pods-Kelpie.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		287031F81F21E005728B655946E2EEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB6951C0DFC7BE0766F4B3D5A2361B3 /* SPStorkController.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPStorkController/SPStorkController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPStorkController/SPStorkController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPStorkController/SPStorkController.modulemap";
+				PRODUCT_MODULE_NAME = SPStorkController;
+				PRODUCT_NAME = SPStorkController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D33643AB561A5B192FE60E8D6BE16A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E12B1D557B9670D3DD3E6D66A4926A /* VegaScrollFlowLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VegaScrollFlowLayout/VegaScrollFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VegaScrollFlowLayout/VegaScrollFlowLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/VegaScrollFlowLayout/VegaScrollFlowLayout.modulemap";
+				PRODUCT_MODULE_NAME = VegaScrollFlowLayout;
+				PRODUCT_NAME = VegaScrollFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7422140FD461865493FD004C49FA70DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E12B1D557B9670D3DD3E6D66A4926A /* VegaScrollFlowLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VegaScrollFlowLayout/VegaScrollFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VegaScrollFlowLayout/VegaScrollFlowLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/VegaScrollFlowLayout/VegaScrollFlowLayout.modulemap";
+				PRODUCT_MODULE_NAME = VegaScrollFlowLayout;
+				PRODUCT_NAME = VegaScrollFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7A9AD8B423DAC430C1FA1FBED4B90EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F1B02B4D98077E7B1975B7AD6B1FD5C /* Pods-Kelpie.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kelpie/Pods-Kelpie-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Kelpie/Pods-Kelpie.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA0BDC786C848C486565157D4D2647DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 917824AB50809A69D42893ED6E301EB1 /* KeyboardObserver.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardObserver/KeyboardObserver-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardObserver/KeyboardObserver-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KeyboardObserver/KeyboardObserver.modulemap";
+				PRODUCT_MODULE_NAME = KeyboardObserver;
+				PRODUCT_NAME = KeyboardObserver;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE1E624EE5D1610982DD94A086825038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB6951C0DFC7BE0766F4B3D5A2361B3 /* SPStorkController.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPStorkController/SPStorkController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPStorkController/SPStorkController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPStorkController/SPStorkController.modulemap";
+				PRODUCT_MODULE_NAME = SPStorkController;
+				PRODUCT_NAME = SPStorkController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E35C2C2E76FBB0FC099561FE31A3ECC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 917824AB50809A69D42893ED6E301EB1 /* KeyboardObserver.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardObserver/KeyboardObserver-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardObserver/KeyboardObserver-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KeyboardObserver/KeyboardObserver.modulemap";
+				PRODUCT_MODULE_NAME = KeyboardObserver;
+				PRODUCT_NAME = KeyboardObserver;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FB85F351BAF3FD088B02C53CC285742 /* Build configuration list for PBXNativeTarget "SPStorkController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287031F81F21E005728B655946E2EEEC /* Debug */,
+				DE1E624EE5D1610982DD94A086825038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
+				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A23CF20DBB2A38EB769966E64AA4687 /* Build configuration list for PBXNativeTarget "Pods-Kelpie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A9AD8B423DAC430C1FA1FBED4B90EAB /* Debug */,
+				0AAD8F5AC178CE3DC17E779F59C718DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4ABB816AB029C80F690D4E5200B58F9 /* Build configuration list for PBXNativeTarget "VegaScrollFlowLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7422140FD461865493FD004C49FA70DF /* Debug */,
+				3D33643AB561A5B192FE60E8D6BE16A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6FBE32A62BBE272DE3619F15A047B71 /* Build configuration list for PBXNativeTarget "KeyboardObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E35C2C2E76FBB0FC099561FE31A3ECC1 /* Debug */,
+				DA0BDC786C848C486565157D4D2647DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

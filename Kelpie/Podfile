@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+def shared_pods
+
+end
+
+target 'Kelpie' do
+  use_frameworks!
+  shared_pods
+  pod "KeyboardObserver", '~> 2.1'
+  pod 'SPStorkController'
+  pod 'VegaScrollFlowLayout'
+end

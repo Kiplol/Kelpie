@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		340A1D10A45C43A4DBDC0157 /* Pods_Kelpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */; };
 		37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */; };
-		37C32EBB231ECB2E008AB2AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EBA231ECB2E008AB2AE /* ViewController.swift */; };
+		37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */; };
 		37C32EBE231ECB2E008AB2AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EBC231ECB2E008AB2AE /* Main.storyboard */; };
 		37C32EC0231ECB30008AB2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EBF231ECB30008AB2AE /* Assets.xcassets */; };
 		37C32EC3231ECB30008AB2AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EC1231ECB30008AB2AE /* LaunchScreen.storyboard */; };
 		37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ECB231EE212008AB2AE /* SearchTarget.swift */; };
 		37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */; };
+		37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */; };
+		37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EC761379B6826E050D6A149 /* Pods-Kelpie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.release.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.release.xcconfig"; sourceTree = "<group>"; };
 		37C32EB5231ECB2E008AB2AE /* Kelpie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelpie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37C32EBA231ECB2E008AB2AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewController.swift; sourceTree = "<group>"; };
 		37C32EBD231ECB2E008AB2AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37C32EBF231ECB30008AB2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C32EC2231ECB30008AB2AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		37C32ECB231EE212008AB2AE /* SearchTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTarget.swift; sourceTree = "<group>"; };
 		37C32ECD231EE5A6008AB2AE /* Kelpie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelpie.entitlements; sourceTree = "<group>"; };
 		37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralProtocols.swift; sourceTree = "<group>"; };
+		37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
 		8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB1CF866CFA6C9B9AB2EB7A /* Pods-Kelpie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.debug.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +110,9 @@
 		37C32ED5231EF982008AB2AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				37C32EBA231ECB2E008AB2AE /* ViewController.swift */,
+				37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */,
+				37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */,
+				37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,10 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */,
 				37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */,
 				37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */,
-				37C32EBB231ECB2E008AB2AE /* ViewController.swift in Sources */,
+				37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */,
 				37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */,
+				37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

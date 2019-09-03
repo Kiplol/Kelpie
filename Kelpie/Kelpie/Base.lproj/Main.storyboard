@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="30b-Ww-EFL">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,38 +9,99 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home View Controller-->
+        <scene sceneID="DyL-5M-ZUD">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kelpie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="Home" id="f4u-cD-rT2" customClass="HomeViewController" customModule="Kelpie" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aI1-tX-kaT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="GJQ-J6-2Rj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVT-Kt-e3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-568"/>
+        </scene>
+        <!--Home Container View Controller-->
+        <scene sceneID="lSJ-xm-Dfh">
+            <objects>
+                <viewController id="30b-Ww-EFL" customClass="HomeContainerViewController" customModule="Kelpie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0aw-uV-NSC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUv-oI-3d1">
-                                <rect key="frame" x="0.0" y="370" width="414" height="70"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS">
-                                        <rect key="frame" x="8" y="20" width="398" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="go"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="m41-vS-fuw"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkE-d2-gcu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
+                                <connections>
+                                    <segue destination="f4u-cD-rT2" kind="embed" id="8A1-ni-Kjd"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-sn-gZZ">
+                                <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="jiW-8q-LyQ"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="embed" id="JmZ-em-GFQ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TkE-d2-gcu" firstAttribute="top" secondItem="0aw-uV-NSC" secondAttribute="top" id="3UT-83-Par"/>
+                            <constraint firstItem="EbZ-sn-gZZ" firstAttribute="leading" secondItem="0aw-uV-NSC" secondAttribute="leading" id="LUG-t4-ryV"/>
+                            <constraint firstAttribute="trailing" secondItem="EbZ-sn-gZZ" secondAttribute="trailing" id="bAV-uR-gOv"/>
+                            <constraint firstAttribute="trailing" secondItem="TkE-d2-gcu" secondAttribute="trailing" id="lC4-wN-X6h"/>
+                            <constraint firstItem="EbZ-sn-gZZ" firstAttribute="top" secondItem="TkE-d2-gcu" secondAttribute="bottom" id="pxo-ts-kaC"/>
+                            <constraint firstItem="TkE-d2-gcu" firstAttribute="leading" secondItem="0aw-uV-NSC" secondAttribute="leading" id="wPT-Fq-JvR"/>
+                            <constraint firstAttribute="bottom" secondItem="EbZ-sn-gZZ" secondAttribute="bottom" id="xJA-rH-OLF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gyX-s2-yp3"/>
+                    </view>
+                    <connections>
+                        <outlet property="constraintSearchHeight" destination="jiW-8q-LyQ" id="QsP-I8-X1f"/>
+                        <outlet property="containerHome" destination="TkE-d2-gcu" id="knQ-ql-p6R"/>
+                        <outlet property="containerSearch" destination="EbZ-sn-gZZ" id="z4x-Cf-b3Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXq-p1-gVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1088.4057971014493" y="-181.47321428571428"/>
+        </scene>
+        <!--Advanced Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AdvancedSearch" id="BYZ-38-t0r" customClass="AdvancedSearchViewController" customModule="Kelpie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS">
+                                <rect key="frame" x="20" y="35" width="374" height="44"/>
+                                <color key="backgroundColor" red="0.49287017788048515" green="1" blue="0.87126010118465491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="03G-Ex-yJb"/>
+                                </constraints>
+                                <color key="textColor" white="0.14853140017757677" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="m41-vS-fuw"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vk4-kR-ITS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eUi-cI-Kx1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vk4-kR-ITS" secondAttribute="trailing" constant="20" id="mq6-je-xhS"/>
+                            <constraint firstItem="Vk4-kR-ITS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sx3-cX-sx5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="textFieldSearch" destination="Vk4-kR-ITS" id="1yw-dc-JcD"/>
-                        <outlet property="textfieldContainer" destination="mUv-oI-3d1" id="PyB-00-G2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

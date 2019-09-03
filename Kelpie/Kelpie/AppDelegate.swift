@@ -6,6 +6,7 @@
 //  Copyright © 2019 Kip. All rights reserved.
 //
 
+import RealmSwift
 import UIKit
 
 @UIApplicationMain
@@ -13,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    // MARK: - App Lifecycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.preparePreparablesAtAppLaunch()
         return true
     }
 
@@ -44,3 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    
+    fileprivate func preparePreparablesAtAppLaunch() {
+        let preparables: [LaunchPreparable.Type] = [Realm.self]
+        preparables.forEach {
+            $0.prepareAtAppLaunch()
+        }
+    }
+    
+}

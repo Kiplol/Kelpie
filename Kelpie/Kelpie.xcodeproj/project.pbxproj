@@ -13,6 +13,8 @@
 		37C32EBE231ECB2E008AB2AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EBC231ECB2E008AB2AE /* Main.storyboard */; };
 		37C32EC0231ECB30008AB2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EBF231ECB30008AB2AE /* Assets.xcassets */; };
 		37C32EC3231ECB30008AB2AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EC1231ECB30008AB2AE /* LaunchScreen.storyboard */; };
+		37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ECB231EE212008AB2AE /* SearchTarget.swift */; };
+		37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		37C32EBF231ECB30008AB2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C32EC2231ECB30008AB2AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37C32EC4231ECB30008AB2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37C32ECB231EE212008AB2AE /* SearchTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTarget.swift; sourceTree = "<group>"; };
+		37C32ECD231EE5A6008AB2AE /* Kelpie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelpie.entitlements; sourceTree = "<group>"; };
+		37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralProtocols.swift; sourceTree = "<group>"; };
 		8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB1CF866CFA6C9B9AB2EB7A /* Pods-Kelpie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.debug.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +74,41 @@
 		37C32EB7231ECB2E008AB2AE /* Kelpie */ = {
 			isa = PBXGroup;
 			children = (
-				37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */,
-				37C32EBA231ECB2E008AB2AE /* ViewController.swift */,
+				37C32ECD231EE5A6008AB2AE /* Kelpie.entitlements */,
 				37C32EBC231ECB2E008AB2AE /* Main.storyboard */,
-				37C32EBF231ECB30008AB2AE /* Assets.xcassets */,
 				37C32EC1231ECB30008AB2AE /* LaunchScreen.storyboard */,
 				37C32EC4231ECB30008AB2AE /* Info.plist */,
+				37C32EBF231ECB30008AB2AE /* Assets.xcassets */,
+				37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */,
+				37C32ECA231EE1E4008AB2AE /* Model */,
+				37C32ED2231EF365008AB2AE /* Protocols */,
+				37C32ED5231EF982008AB2AE /* ViewControllers */,
 			);
 			path = Kelpie;
+			sourceTree = "<group>";
+		};
+		37C32ECA231EE1E4008AB2AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37C32ECB231EE212008AB2AE /* SearchTarget.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37C32ED2231EF365008AB2AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		37C32ED5231EF982008AB2AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				37C32EBA231ECB2E008AB2AE /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A85C4AA2176599AEC13B7B0C /* Pods */ = {
@@ -122,6 +154,11 @@
 				TargetAttributes = {
 					37C32EB4231ECB2E008AB2AE = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -203,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */,
+				37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */,
 				37C32EBB231ECB2E008AB2AE /* ViewController.swift in Sources */,
 				37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */,
 			);
@@ -351,6 +390,7 @@
 			baseConfigurationReference = EAB1CF866CFA6C9B9AB2EB7A /* Pods-Kelpie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kelpie/Kelpie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LSB86U552U;
 				INFOPLIST_FILE = Kelpie/Info.plist;
@@ -371,6 +411,7 @@
 			baseConfigurationReference = 0EC761379B6826E050D6A149 /* Pods-Kelpie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kelpie/Kelpie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LSB86U552U;
 				INFOPLIST_FILE = Kelpie/Info.plist;

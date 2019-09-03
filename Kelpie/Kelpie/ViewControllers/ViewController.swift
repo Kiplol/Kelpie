@@ -51,7 +51,7 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        SearchTarget.getOrMakeIMDb().executeSearch(query: textField.text ?? "")
         return false
     }
 }

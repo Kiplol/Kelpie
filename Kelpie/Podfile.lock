@@ -1,24 +1,46 @@
 PODS:
+  - Hue (5.0.0)
+  - Ji (5.0.0)
   - KeyboardObserver (2.1.0)
+  - ReadabilityKit (0.7.3):
+    - Ji (= 5.0.0)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
   - SPStorkController (1.7.6)
   - VegaScrollFlowLayout (1.1)
 
 DEPENDENCIES:
+  - Hue
   - KeyboardObserver (~> 2.1)
+  - ReadabilityKit
+  - RealmSwift
   - SPStorkController
   - VegaScrollFlowLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Hue
+    - Ji
     - KeyboardObserver
+    - ReadabilityKit
+    - Realm
+    - RealmSwift
     - SPStorkController
     - VegaScrollFlowLayout
 
 SPEC CHECKSUMS:
+  Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
+  Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   KeyboardObserver: 338f87db88f4d6f4b4af334fe025bc824251d57b
+  ReadabilityKit: d28ec50a317067fd1c06aa6518b05171bb19ce47
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   SPStorkController: 6d0d0716a4e9e8245aa80715ffc57491b428569e
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: b6dc1b102efcf406084d9496e057818b0e880d43
+PODFILE CHECKSUM: e9f7d9df1f8949844938192fd01a263b77f5fa9f
 
 COCOAPODS: 1.7.5

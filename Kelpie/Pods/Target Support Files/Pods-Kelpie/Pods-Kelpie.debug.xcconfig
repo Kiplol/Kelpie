@@ -1,11 +1,13 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/KeyboardObserver" "${PODS_CONFIGURATION_BUILD_DIR}/SPStorkController" "${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Hue" "${PODS_CONFIGURATION_BUILD_DIR}/Ji" "${PODS_CONFIGURATION_BUILD_DIR}/KeyboardObserver" "${PODS_CONFIGURATION_BUILD_DIR}/ReadabilityKit" "${PODS_CONFIGURATION_BUILD_DIR}/Realm" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift" "${PODS_CONFIGURATION_BUILD_DIR}/SPStorkController" "${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/KeyboardObserver/KeyboardObserver.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SPStorkController/SPStorkController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Hue/Hue.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Ji/Ji.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/KeyboardObserver/KeyboardObserver.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ReadabilityKit/ReadabilityKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Realm/Realm.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift/RealmSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SPStorkController/SPStorkController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework/Headers" $(SDKROOT)/usr/include/libxml2
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "KeyboardObserver" -framework "SPStorkController" -framework "UIKit" -framework "VegaScrollFlowLayout"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Realm/core"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "Hue" -framework "Ji" -framework "KeyboardObserver" -framework "ReadabilityKit" -framework "Realm" -framework "RealmSwift" -framework "SPStorkController" -framework "Security" -framework "UIKit" -framework "VegaScrollFlowLayout"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_INCLUDE_PATHS = $(inherited) $(SRCROOT)/Ji/Sources/Clibxml2

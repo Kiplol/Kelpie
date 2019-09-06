@@ -38,11 +38,16 @@
                                     <segue destination="f4u-cD-rT2" kind="embed" id="8A1-ni-Kjd"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-sn-gZZ">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-sn-gZZ">
                                 <rect key="frame" x="0.0" y="812" width="414" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="jiW-8q-LyQ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="embed" id="JmZ-em-GFQ"/>
                                 </connections>
@@ -61,6 +66,7 @@
                         <viewLayoutGuide key="safeArea" id="gyX-s2-yp3"/>
                     </view>
                     <connections>
+                        <outlet property="constraintBetweenBothCotainers" destination="pxo-ts-kaC" id="khD-ES-IgC"/>
                         <outlet property="constraintSearchHeight" destination="jiW-8q-LyQ" id="QsP-I8-X1f"/>
                         <outlet property="containerHome" destination="TkE-d2-gcu" id="knQ-ql-p6R"/>
                         <outlet property="containerSearch" destination="EbZ-sn-gZZ" id="z4x-Cf-b3Y"/>
@@ -79,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS">
-                                <rect key="frame" x="20" y="35" width="374" height="44"/>
+                                <rect key="frame" x="20" y="64" width="374" height="44"/>
                                 <color key="backgroundColor" red="0.49287017788048515" green="1" blue="0.87126010118465491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="03G-Ex-yJb"/>

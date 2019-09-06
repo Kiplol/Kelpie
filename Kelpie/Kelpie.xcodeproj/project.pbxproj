@@ -17,6 +17,7 @@
 		37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */; };
 		37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */; };
 		37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */; };
+		37DED314231F447500438BFC /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DED313231F447500438BFC /* ViewUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralProtocols.swift; sourceTree = "<group>"; };
 		37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
+		37DED313231F447500438BFC /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
 		8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB1CF866CFA6C9B9AB2EB7A /* Pods-Kelpie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.debug.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				37C32ECA231EE1E4008AB2AE /* Model */,
 				37C32ED2231EF365008AB2AE /* Protocols */,
 				37C32ED5231EF982008AB2AE /* ViewControllers */,
+				37DED312231F445E00438BFC /* Views */,
 			);
 			path = Kelpie;
 			sourceTree = "<group>";
@@ -115,6 +118,14 @@
 				37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		37DED312231F445E00438BFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37DED313231F447500438BFC /* ViewUtilities.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A85C4AA2176599AEC13B7B0C /* Pods */ = {
@@ -249,6 +260,7 @@
 				37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */,
 				37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */,
 				37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */,
+				37DED314231F447500438BFC /* ViewUtilities.swift in Sources */,
 				37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */,
 				37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */,
 				37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */,

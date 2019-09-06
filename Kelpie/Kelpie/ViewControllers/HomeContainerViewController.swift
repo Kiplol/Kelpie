@@ -11,21 +11,25 @@ import UIKit
 
 class HomeContainerViewController: UIViewController {
     
+    enum ResultMode: CaseIterable {
+        case quick, detailed
+    }
+    
     // MARK: - ivars
     private let keyboard = KeyboardObserver()
     private var homeViewController: HomeViewController!
     private var searchViewController: AdvancedSearchViewController!
+    private var resultMode: ResultMode = .quick
     
     // MARK: - IBOutlets
     @IBOutlet weak var containerHome: UIView!
     @IBOutlet weak var containerSearch: UIView!
     @IBOutlet weak var constraintSearchHeight: NSLayoutConstraint!
+    @IBOutlet weak var constraintBetweenBothCotainers: NSLayoutConstraint!
     
     // MARK: - View Lifecyce
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.constraintSearchHeight.constant = 20.0 + 44.0 + 20.0 + self.view.safeAreaInsets.bottom
-        self.view.layoutIfNeeded()
         
         guard let homeVC = self.children.filter({ (vc) -> Bool in
             vc is HomeViewController
@@ -41,13 +45,18 @@ class HomeContainerViewController: UIViewController {
         }
         self.searchViewController = (searchVC as! AdvancedSearchViewController)
         
+        self.constraintSearchHeight.constant = 20.0 + 44.0 + 20.0 + self.view.safeAreaInsets.bottom
+        self.constraintBetweenBothCotainers.constant = -self.containerSearch.layer.cornerRadius
+        self.view.layoutIfNeeded()
+        
         keyboard.observe { [weak self] (event) -> Void in
             guard let self = self else { return }
             switch event.type {
             case .willShow, .willHide, .willChangeFrame:
                 let keyboardFrameEnd = event.keyboardFrameEnd
                 let height = keyboardFrameEnd.height
-                self.constraintSearchHeight.constant = height + self.searchViewController.textFieldSearch.frame.maxY + 20.0
+                self.constraintSearchHeight.constant = height + self.searchViewController.textFieldSearch.frame.maxY
+                    + 20.0
                 self.view.layoutIfNeeded()
             default:
                 break

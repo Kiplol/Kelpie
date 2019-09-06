@@ -27,7 +27,7 @@ class SearchTarget: Object {
     
     // MARK: - Business Logic
     func executeSearch(query: String) {
-        let resultURLString = self.url.replacingOccurrences(of: SearchTarget.queryToken, with: query)
+        let resultURLString = self.url.replacingOccurrences(of: SearchTarget.queryToken, with: query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query)
         guard let resultURL = URL(string: resultURLString) else {
             return
         }

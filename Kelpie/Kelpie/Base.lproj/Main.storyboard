@@ -38,36 +38,46 @@
                                     <segue destination="f4u-cD-rT2" kind="embed" id="8A1-ni-Kjd"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-sn-gZZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Od0-dA-3Es">
                                 <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                                <subviews>
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-sn-gZZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="embed" id="JmZ-em-GFQ"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="jiW-8q-LyQ"/>
+                                    <constraint firstItem="EbZ-sn-gZZ" firstAttribute="leading" secondItem="Od0-dA-3Es" secondAttribute="leading" id="ANO-xg-GBn"/>
+                                    <constraint firstAttribute="trailing" secondItem="EbZ-sn-gZZ" secondAttribute="trailing" id="Vmr-Ng-lFI"/>
+                                    <constraint firstItem="EbZ-sn-gZZ" firstAttribute="top" secondItem="Od0-dA-3Es" secondAttribute="top" id="cqO-JK-fQn"/>
+                                    <constraint firstAttribute="height" constant="84" id="iBu-2j-ybL"/>
+                                    <constraint firstAttribute="bottom" secondItem="EbZ-sn-gZZ" secondAttribute="bottom" id="pXp-7J-fiV"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="embed" id="JmZ-em-GFQ"/>
-                                </connections>
-                            </containerView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TkE-d2-gcu" firstAttribute="top" secondItem="0aw-uV-NSC" secondAttribute="top" id="3UT-83-Par"/>
-                            <constraint firstItem="EbZ-sn-gZZ" firstAttribute="leading" secondItem="0aw-uV-NSC" secondAttribute="leading" id="LUG-t4-ryV"/>
-                            <constraint firstAttribute="trailing" secondItem="EbZ-sn-gZZ" secondAttribute="trailing" id="bAV-uR-gOv"/>
+                            <constraint firstAttribute="bottom" secondItem="Od0-dA-3Es" secondAttribute="bottom" id="AZP-OY-ijb"/>
+                            <constraint firstItem="Od0-dA-3Es" firstAttribute="top" secondItem="TkE-d2-gcu" secondAttribute="bottom" id="FmV-lm-3Id"/>
+                            <constraint firstItem="Od0-dA-3Es" firstAttribute="leading" secondItem="0aw-uV-NSC" secondAttribute="leading" id="geF-L4-SyZ"/>
                             <constraint firstAttribute="trailing" secondItem="TkE-d2-gcu" secondAttribute="trailing" id="lC4-wN-X6h"/>
-                            <constraint firstItem="EbZ-sn-gZZ" firstAttribute="top" secondItem="TkE-d2-gcu" secondAttribute="bottom" id="pxo-ts-kaC"/>
+                            <constraint firstAttribute="trailing" secondItem="Od0-dA-3Es" secondAttribute="trailing" id="udS-Bz-V5G"/>
                             <constraint firstItem="TkE-d2-gcu" firstAttribute="leading" secondItem="0aw-uV-NSC" secondAttribute="leading" id="wPT-Fq-JvR"/>
-                            <constraint firstAttribute="bottom" secondItem="EbZ-sn-gZZ" secondAttribute="bottom" id="xJA-rH-OLF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gyX-s2-yp3"/>
                     </view>
                     <connections>
-                        <outlet property="constraintBetweenBothCotainers" destination="pxo-ts-kaC" id="khD-ES-IgC"/>
-                        <outlet property="constraintSearchHeight" destination="jiW-8q-LyQ" id="QsP-I8-X1f"/>
+                        <outlet property="constraintBetweenBothCotainers" destination="AZP-OY-ijb" id="Lma-ux-3Op"/>
+                        <outlet property="constraintSearchHeight" destination="iBu-2j-ybL" id="Bm9-xQ-6dB"/>
                         <outlet property="containerHome" destination="TkE-d2-gcu" id="knQ-ql-p6R"/>
                         <outlet property="containerSearch" destination="EbZ-sn-gZZ" id="z4x-Cf-b3Y"/>
                     </connections>
@@ -86,7 +96,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS">
                                 <rect key="frame" x="20" y="64" width="374" height="44"/>
-                                <color key="backgroundColor" red="0.85304769027359206" green="0.96655954301326041" blue="0.97483740482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="03G-Ex-yJb"/>
                                 </constraints>

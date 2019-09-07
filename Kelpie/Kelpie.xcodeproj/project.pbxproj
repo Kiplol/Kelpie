@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		340A1D10A45C43A4DBDC0157 /* Pods_Kelpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */; };
+		372B7D7323241411008CEE51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B7D7223241411008CEE51 /* Constants.swift */; };
 		37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */; };
 		37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */; };
 		37C32EBE231ECB2E008AB2AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EBC231ECB2E008AB2AE /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0EC761379B6826E050D6A149 /* Pods-Kelpie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.release.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.release.xcconfig"; sourceTree = "<group>"; };
+		372B7D7223241411008CEE51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		37C32EB5231ECB2E008AB2AE /* Kelpie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelpie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		37C32EB7231ECB2E008AB2AE /* Kelpie */ = {
 			isa = PBXGroup;
 			children = (
+				372B7D7223241411008CEE51 /* Constants.swift */,
 				37C32ECD231EE5A6008AB2AE /* Kelpie.entitlements */,
 				37C32EBC231ECB2E008AB2AE /* Main.storyboard */,
 				37C32EC1231ECB30008AB2AE /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */,
 				37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */,
 				37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */,
+				372B7D7323241411008CEE51 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

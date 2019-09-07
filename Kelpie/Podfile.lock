@@ -1,4 +1,5 @@
 PODS:
+  - Gestalt (2.0.1)
   - Hue (5.0.0)
   - Ji (5.0.0)
   - KeyboardObserver (2.1.0)
@@ -13,6 +14,7 @@ PODS:
   - VegaScrollFlowLayout (1.1)
 
 DEPENDENCIES:
+  - Gestalt (~> 2.0.0)
   - Hue
   - KeyboardObserver (~> 2.1)
   - ReadabilityKit
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Gestalt
     - Hue
     - Ji
     - KeyboardObserver
@@ -32,6 +35,7 @@ SPEC REPOS:
     - VegaScrollFlowLayout
 
 SPEC CHECKSUMS:
+  Gestalt: dd2112f16576ee691a0ca381b0223464d5f123a3
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
   Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   KeyboardObserver: 338f87db88f4d6f4b4af334fe025bc824251d57b
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   SPStorkController: 6d0d0716a4e9e8245aa80715ffc57491b428569e
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: e9f7d9df1f8949844938192fd01a263b77f5fa9f
+PODFILE CHECKSUM: c49b4cbab3796d8b23c03f8c25873c0788a2ba98
 
 COCOAPODS: 1.7.5

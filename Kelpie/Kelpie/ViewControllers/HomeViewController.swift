@@ -5,7 +5,7 @@
 //  Created by Elliott Kipper on 9/3/19.
 //  Copyright © 2019 Kip. All rights reserved.
 //
-
+import Hue
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -19,6 +19,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bg = [UIColor.kelpieMint, UIColor.kelpieMint.darker].gradient()
+        bg.frame = self.view.bounds
+        self.view.layer.insertSublayer(bg, at: 0)
     }
 
 }

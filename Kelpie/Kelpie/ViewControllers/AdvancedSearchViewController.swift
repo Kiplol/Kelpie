@@ -43,7 +43,8 @@ extension AdvancedSearchViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        SearchTarget.getOrMakeIMDb().executeSearch(query: textField.text ?? "")
+//        SearchTarget.getOrMakeIMDb().executeSearch(query: textField.text ?? "")
+        textField.resignFirstResponder()
         return false
     }
 }

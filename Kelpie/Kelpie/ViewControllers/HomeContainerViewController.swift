@@ -20,6 +20,7 @@ class HomeContainerViewController: UIViewController {
     private var homeViewController: HomeViewController!
     private var searchViewController: AdvancedSearchViewController!
     private var resultMode: ResultMode = .quick
+    private var isFirstAppearance = true
     
     // MARK: - IBOutlets
     @IBOutlet weak var containerHome: UIView!
@@ -44,25 +45,43 @@ class HomeContainerViewController: UIViewController {
             fatalError("Check storyboard for missing AdvancedSearchViewController")
         }
         self.searchViewController = (searchVC as! AdvancedSearchViewController)
-        
-        self.constraintSearchHeight.constant = 20.0 + 44.0 + 20.0 + self.view.safeAreaInsets.bottom
         self.constraintBetweenBothCotainers.constant = -self.containerSearch.layer.cornerRadius
+        self.constraintSearchHeight.constant = 20.0 + 44.0 + 20.0 + self.view.safeAreaInsets.bottom
         self.view.layoutIfNeeded()
         
-        keyboard.observe { [weak self] (event) -> Void in
-            guard let self = self else { return }
-            switch event.type {
-            case .willShow, .willHide, .willChangeFrame:
-                let keyboardFrameEnd = event.keyboardFrameEnd
-                let height = keyboardFrameEnd.height
-                self.constraintSearchHeight.constant = height + self.searchViewController.textFieldSearch.frame.maxY
-                    + 20.0
-                self.view.layoutIfNeeded()
-            default:
-                break
-            }
+        keyboard.observe { [weak self] event -> Void in
+            self?.keyboardDidChange(event: event)
         }
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        switch self.keyboard.state {
+        case .showing, .shown:
+            break
+        default:
+            self.constraintSearchHeight.constant = self.searchViewController.textFieldSearch.frame.maxY
+                + 20.0 + self.view.safeAreaInsets.bottom
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // MARK: - KeyboardObserver
+    private func keyboardDidChange(event: KeyboardEvent) {
+        switch event.type {
+        case .willShow, .willHide, .willChangeFrame:
+            let keyboardFrameEnd = event.keyboardFrameEnd
+            let height = max(self.view.safeAreaInsets.bottom, self.view.bounds.size.height - keyboardFrameEnd.origin.y)
+            self.constraintSearchHeight.constant = height + self.searchViewController.textFieldSearch.frame.maxY
+                + 20.0
+            self.view.layoutIfNeeded()
+        default:
+            break
+        }
     }
 
 }

@@ -34,17 +34,17 @@ class HomeContainerViewController: UIViewController {
         
         guard let homeVC = self.children.filter({ (vc) -> Bool in
             vc is HomeViewController
-        }).first else {
+        }).first as? HomeViewController else {
             fatalError("Check storyboard for missing HomeViewController")
         }
-        self.homeViewController = (homeVC as! HomeViewController)
+        self.homeViewController = homeVC
         
         guard let searchVC = self.children.filter({ (vc) -> Bool in
             vc is AdvancedSearchViewController
-        }).first else {
+        }).first as? AdvancedSearchViewController else {
             fatalError("Check storyboard for missing AdvancedSearchViewController")
         }
-        self.searchViewController = (searchVC as! AdvancedSearchViewController)
+        self.searchViewController = searchVC
         self.constraintBetweenBothCotainers.constant = -self.containerSearch.layer.cornerRadius
         self.constraintSearchHeight.constant = 20.0 + 44.0 + 20.0 + self.view.safeAreaInsets.bottom
         self.view.layoutIfNeeded()

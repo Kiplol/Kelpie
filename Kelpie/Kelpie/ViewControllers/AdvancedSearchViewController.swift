@@ -21,7 +21,11 @@ class AdvancedSearchViewController: UIViewController {
     
     // MARK: - Helper
     class func fromStoryboard() -> AdvancedSearchViewController {
-        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: storyboardID) as! AdvancedSearchViewController
+        guard let vc = UIStoryboard(name: "Main", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: storyboardID) as? AdvancedSearchViewController else {
+            fatalError("Check storyboard for missing AdvancedSearchViewController")
+        }
+        return vc
     }
     
     // MARK: - View Lifeccle
@@ -33,8 +37,6 @@ class AdvancedSearchViewController: UIViewController {
         super.viewWillAppear(animated)
 //        self.textFieldSearch.becomeFirstResponder()
     }
-
-
 }
 
 extension AdvancedSearchViewController: UITextFieldDelegate {
@@ -48,4 +50,3 @@ extension AdvancedSearchViewController: UITextFieldDelegate {
         return false
     }
 }
-

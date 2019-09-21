@@ -5,12 +5,13 @@ PODS:
   - KeyboardObserver (2.1.0)
   - ReadabilityKit (0.7.3):
     - Ji (= 5.0.0)
-  - Realm (3.17.3):
-    - Realm/Headers (= 3.17.3)
-  - Realm/Headers (3.17.3)
-  - RealmSwift (3.17.3):
-    - Realm (= 3.17.3)
-  - SPStorkController (1.7.6)
+  - Realm (3.18.0):
+    - Realm/Headers (= 3.18.0)
+  - Realm/Headers (3.18.0)
+  - RealmSwift (3.18.0):
+    - Realm (= 3.18.0)
+  - SPStorkController (1.7.9)
+  - SwiftLint (0.35.0)
   - VegaScrollFlowLayout (1.1)
 
 DEPENDENCIES:
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - ReadabilityKit
   - RealmSwift
   - SPStorkController
+  - SwiftLint
   - VegaScrollFlowLayout
 
 SPEC REPOS:
@@ -32,6 +34,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SPStorkController
+    - SwiftLint
     - VegaScrollFlowLayout
 
 SPEC CHECKSUMS:
@@ -40,11 +43,12 @@ SPEC CHECKSUMS:
   Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   KeyboardObserver: 338f87db88f4d6f4b4af334fe025bc824251d57b
   ReadabilityKit: d28ec50a317067fd1c06aa6518b05171bb19ce47
-  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
-  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
-  SPStorkController: 6d0d0716a4e9e8245aa80715ffc57491b428569e
+  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
+  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
+  SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: c49b4cbab3796d8b23c03f8c25873c0788a2ba98
+PODFILE CHECKSUM: 488121ea4eaa63683d6964606acde2ed412b1208
 
 COCOAPODS: 1.7.5

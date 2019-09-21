@@ -6,6 +6,7 @@ def shared_pods
   pod 'Gestalt', '~> 2.0.0'
   pod 'Hue'
   pod 'RealmSwift'
+  pod 'SwiftLint'
 end
 
 target 'Kelpie' do

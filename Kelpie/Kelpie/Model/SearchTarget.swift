@@ -16,7 +16,7 @@ class SearchTarget: Object {
     // MARK: - ivars
     @objc dynamic var name: String = ""
     @objc dynamic var url: String = "kelpie://"
-    @objc dynamic var colorHex: String? = nil
+    @objc dynamic var colorHex: String?
     
     convenience init(name: String, url: String, colorHex: String? = nil) {
         self.init()
@@ -27,7 +27,8 @@ class SearchTarget: Object {
     
     // MARK: - Business Logic
     func executeSearch(query: String) {
-        let resultURLString = self.url.replacingOccurrences(of: SearchTarget.queryToken, with: query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query)
+        let escaped = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
+        let resultURLString = self.url.replacingOccurrences(of: SearchTarget.queryToken, with: escaped)
         guard let resultURL = URL(string: resultURLString) else {
             return
         }
@@ -37,6 +38,11 @@ class SearchTarget: Object {
     // MARK: - DB
     class func named(_ name: String) -> SearchTarget? {
         return try! Realm().objects(self.self).filter("name = %@", name).first
+    }
+    
+    class func all() -> Results<SearchTarget> {
+        let realm = try! Realm()
+        return realm.objects(self)
     }
     
 }

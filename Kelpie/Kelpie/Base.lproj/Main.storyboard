@@ -131,40 +131,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search..." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS" customClass="PaddedTextField" customModule="Kelpie" customModuleProvider="target">
-                                <rect key="frame" x="20" y="64" width="374" height="44"/>
-                                <color key="backgroundColor" red="0.91979862812855107" green="0.97511346424348877" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rao-Yt-MKX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="03G-Ex-yJb"/>
+                                    <constraint firstAttribute="height" constant="60" id="atE-0A-kOd"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.35458583047945208" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="webSearch" returnKeyType="search"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalInsets">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <color key="barTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="m41-vS-fuw"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZyG-pJ-er6"/>
                                 </connections>
-                            </textField>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vk4-kR-ITS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eUi-cI-Kx1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vk4-kR-ITS" secondAttribute="trailing" constant="20" id="mq6-je-xhS"/>
-                            <constraint firstItem="Vk4-kR-ITS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sx3-cX-sx5"/>
+                            <constraint firstItem="rao-Yt-MKX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bhg-Y9-Wtf"/>
+                            <constraint firstItem="rao-Yt-MKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U7e-gz-02D"/>
+                            <constraint firstItem="rao-Yt-MKX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r11-F6-Vgq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="786"/>
                     <connections>
-                        <outlet property="textFieldSearch" destination="Vk4-kR-ITS" id="1yw-dc-JcD"/>
+                        <outlet property="searchBar" destination="rao-Yt-MKX" id="7yD-Nx-qfO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

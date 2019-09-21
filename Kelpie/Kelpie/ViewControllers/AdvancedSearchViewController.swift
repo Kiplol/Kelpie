@@ -17,7 +17,7 @@ class AdvancedSearchViewController: UIViewController {
     let keyboard = KeyboardObserver()
     
     // MARK: - IBOutlets
-    @IBOutlet weak var textFieldSearch: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Helper
     class func fromStoryboard() -> AdvancedSearchViewController {
@@ -35,18 +35,25 @@ class AdvancedSearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.textFieldSearch.becomeFirstResponder()
     }
 }
 
-extension AdvancedSearchViewController: UITextFieldDelegate {
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+extension AdvancedSearchViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {// called when text starts editing
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool { // return NO to not resign first responder
         return true
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        SearchTarget.getOrMakeIMDb().executeSearch(query: textField.text ?? "")
-        textField.resignFirstResponder()
-        return false
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) { // called when text ends editing
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // called when text changes (including clear)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { // called when keyboard search button pressed
+        searchBar.resignFirstResponder()
     }
 }

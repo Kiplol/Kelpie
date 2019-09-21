@@ -64,7 +64,7 @@ class HomeContainerViewController: UIViewController {
         case .showing, .shown:
             break
         default:
-            self.constraintSearchHeight.constant = self.searchViewController.textFieldSearch.frame.maxY
+            self.constraintSearchHeight.constant = self.searchViewController.searchBar.frame.maxY
                 + 20.0 + self.view.safeAreaInsets.bottom
             self.view.layoutIfNeeded()
         }
@@ -76,7 +76,7 @@ class HomeContainerViewController: UIViewController {
         case .willShow, .willHide, .willChangeFrame:
             let keyboardFrameEnd = event.keyboardFrameEnd
             let height = max(self.view.safeAreaInsets.bottom, self.view.bounds.size.height - keyboardFrameEnd.origin.y)
-            self.constraintSearchHeight.constant = height + self.searchViewController.textFieldSearch.frame.maxY
+            self.constraintSearchHeight.constant = height + self.searchViewController.searchBar.frame.maxY
                 + 20.0
             self.view.layoutIfNeeded()
         default:

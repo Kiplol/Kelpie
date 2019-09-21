@@ -14,7 +14,11 @@ class HomeViewController: UIViewController {
     static let storyboardID = "Home"
     
     // MARK: - ivars
+    private var searchTargets = SearchTarget.all()
     private var searchTargetsNotificationToken: NotificationToken?
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var labelStats: UILabel!
     
     // MARK: - Helper
     class func fromStoryboard() -> HomeViewController {
@@ -29,7 +33,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchTargetsNotificationToken = SearchTarget.all()
+        self.searchTargetsNotificationToken = self.searchTargets
             .observe { [weak self] changes in
                 self?.searchTargetsChanged(changes)
         }
@@ -40,6 +44,6 @@ class HomeViewController: UIViewController {
     
     // MARK: - Realm
     private func searchTargetsChanged(_ changes: RealmCollectionChange<Results<SearchTarget>>) {
-        
+        self.labelStats.text = "\(self.searchTargets.count) search targets"
     }
 }

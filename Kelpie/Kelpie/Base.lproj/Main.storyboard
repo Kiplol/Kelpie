@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-Jt-ijz">
-                                <rect key="frame" x="40" y="64" width="334" height="31.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -25,12 +25,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.27880199244507764" green="0.39605805837563457" blue="0.38027617585892776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3ae-Jt-ijz" firstAttribute="top" secondItem="GJQ-J6-2Rj" secondAttribute="top" constant="20" id="ZC6-q3-RGs"/>
+                            <constraint firstItem="3ae-Jt-ijz" firstAttribute="top" secondItem="GJQ-J6-2Rj" secondAttribute="top" constant="40" id="ZC6-q3-RGs"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="40" id="fHK-Ji-x7K"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="centerX" secondItem="aI1-tX-kaT" secondAttribute="centerX" id="w9O-dd-QHd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GJQ-J6-2Rj"/>
                     </view>
+                    <connections>
+                        <outlet property="labelStats" destination="3ae-Jt-ijz" id="GLy-Po-B8G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVT-Kt-e3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search..." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Vk4-kR-ITS" customClass="PaddedTextField" customModule="Kelpie" customModuleProvider="target">
                                 <rect key="frame" x="20" y="64" width="374" height="44"/>
                                 <color key="backgroundColor" red="0.91979862812855107" green="0.97511346424348877" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -136,9 +139,12 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.35458583047945208" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="webSearch" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="webSearch" returnKeyType="search"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalInsets">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>

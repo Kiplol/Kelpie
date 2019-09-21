@@ -170,3 +170,49 @@ extension UIColor {
     }
     
 }
+
+@IBDesignable
+open class PaddedTextField: UITextField {
+    @IBInspectable public var horizontalInsets: CGFloat = 0.0 {
+        didSet {
+            self.textInsets = UIEdgeInsets(top: self.textInsets.top,
+                                           left: self.horizontalInsets,
+                                           bottom: self.textInsets.bottom,
+                                           right: self.horizontalInsets)
+        }
+    }
+    private var textInsets = UIEdgeInsets.zero {
+        didSet { setNeedsDisplay() }
+    }
+    override open func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    convenience init() {
+        self.init(frame: .zero)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    open override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: textInsets)
+    }
+    
+    open override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: textInsets)
+    }
+    
+    open override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: textInsets)
+    }
+    
+    open override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.inset(by: textInsets))
+    }
+}

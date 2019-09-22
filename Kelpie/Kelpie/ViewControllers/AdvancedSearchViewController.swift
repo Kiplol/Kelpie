@@ -50,7 +50,8 @@ extension AdvancedSearchViewController: UISearchBarDelegate {
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) { // called when text ends editing
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // called when text changes (including clear)
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // called when text changes (including clear)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { // called when keyboard search button pressed

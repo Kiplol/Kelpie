@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 fileprivate extension AppDelegate {
     
      func preparePreparablesAtAppLaunch() {
-        let preparables: [LaunchPreparable.Type] = [Realm.self]
+        let preparables: [LaunchPreparable.Type] = [Realm.self, SearchTarget.self]
         preparables.forEach {
             $0.prepareAtAppLaunch()
         }

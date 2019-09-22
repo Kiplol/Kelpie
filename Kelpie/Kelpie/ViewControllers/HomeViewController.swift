@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Realm
     private func searchTargetsChanged(_ changes: RealmCollectionChange<Results<SearchTarget>>) {
-        self.labelStats.text = "\(self.searchTargets.count) search targets"
+        let count = self.searchTargets.count
+        self.labelStats.text = "\(count) search target\(count == 1 ? "" : "s")"
     }
 }

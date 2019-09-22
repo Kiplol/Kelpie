@@ -47,8 +47,9 @@ class SearchTarget: Object {
     
 }
 
-extension SearchTarget {
+extension SearchTarget: LaunchPreparable {
     
+    // MARK: - IMDb
     class func getOrMakeIMDb() -> SearchTarget {
         if let cached = self.named("IMDb") {
             return cached
@@ -63,4 +64,8 @@ extension SearchTarget {
         return imdb
     }
     
+    // MARK: - LaunchPreparable
+    static func prepareAtAppLaunch() {
+        _ = self.getOrMakeIMDb()
+    }
 }

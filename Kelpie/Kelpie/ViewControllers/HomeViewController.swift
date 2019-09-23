@@ -29,6 +29,11 @@ class HomeViewController: UIViewController {
         return vc
     }
     
+    // MARK: -
+    deinit {
+        self.searchTargetsNotificationToken?.invalidate()
+    }
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

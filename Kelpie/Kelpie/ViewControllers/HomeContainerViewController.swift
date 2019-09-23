@@ -77,7 +77,7 @@ class HomeContainerViewController: UIViewController {
             let keyboardFrameEnd = event.keyboardFrameEnd
             let height = max(self.view.safeAreaInsets.bottom, self.view.bounds.size.height - keyboardFrameEnd.origin.y)
             self.constraintSearchHeight.constant = height + self.searchViewController.searchBar.frame.maxY
-                + 20.0
+                + 20.0 + 300.0
             self.view.layoutIfNeeded()
         default:
             break

@@ -9,6 +9,10 @@
 import Foundation
 import RealmSwift
 
+protocol SearchTargetUpdatable {
+    func update(searchTarget: SearchTarget, query: String?)
+}
+
 class SearchTarget: Object {
     
     public static let queryToken: String = "{query}"

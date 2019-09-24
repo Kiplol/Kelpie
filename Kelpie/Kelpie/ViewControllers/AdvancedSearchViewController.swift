@@ -59,9 +59,11 @@ class AdvancedSearchViewController: UIViewController {
     
     // MARK: -
     private func prepareCollectionView() {
-        self.collectionView.flowLayout?.estimatedItemSize = CGSize(width: self.collectionView.usableWidth(), height: 90)
         let cellNib = UINib(nibName: "SearchTargetCollectionViewCell", bundle: Bundle.main)
         self.collectionView.register(cellNib, forCellWithReuseIdentifier: AdvancedSearchViewController.cellReuseID)
+        if let vegaLayout = self.collectionView.flowLayout as? VegaScrollFlowLayout {
+            vegaLayout.springHardness = 1000
+        }
     }
     
     // MARK: - Realm
@@ -92,18 +94,29 @@ extension AdvancedSearchViewController: UISearchBarDelegate {
     }
 }
 
-extension AdvancedSearchViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension AdvancedSearchViewController: UICollectionViewDataSource, UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.searchTargets.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvancedSearchViewController.cellReuseID , for: indexPath)
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let searchTarget = self.searchTargets[0]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvancedSearchViewController.cellReuseID,
+                                                      for: indexPath)
+        (cell as? SearchTargetUpdatable)?.update(searchTarget: searchTarget, query: self.searchBar.text)
         return cell
     }
     
     // MARK: - UICollectionViewDelegate
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.usableWidth(), height: 60.0)
+    }
     
 }

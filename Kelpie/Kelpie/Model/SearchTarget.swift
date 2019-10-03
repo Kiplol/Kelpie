@@ -16,6 +16,14 @@ protocol SearchTargetUpdatable {
 class SearchTarget: Object {
     
     public static let queryToken: String = "{query}"
+    public static var currentQuery: String? {
+        didSet {
+            if SearchTarget.currentQuery != oldValue {
+                NotificationCenter.default.post(name: self.currentQueryDidChange, object: self.currentQuery)
+            }
+        }
+    }
+    public static let currentQueryDidChange = Notification.Name("SearchTarget.currentQueryDidChange")
     
     // MARK: - ivars
     @objc dynamic var name: String = ""

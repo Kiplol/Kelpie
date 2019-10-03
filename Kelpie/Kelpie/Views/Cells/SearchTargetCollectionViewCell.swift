@@ -19,6 +19,7 @@ class SearchTargetCollectionViewCell: UICollectionViewCell, SearchTargetUpdatabl
     // MARK: - View Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.imageView.roundCorners()
     }
     
     // MARK: - SearchTargetUpdatable
@@ -29,9 +30,10 @@ class SearchTargetCollectionViewCell: UICollectionViewCell, SearchTargetUpdatabl
             self.labelDescription.text? += " for \(query)"
         }
         if let colorString = searchTarget.colorHex {
-            self.mainContainer.borderColor = UIColor(hex: colorString).alpha(0.5)
+            self.imageView.backgroundColor = UIColor(hex: colorString)
         } else {
-            self.mainContainer.borderColor = UIColor.kelpieAccent.alpha(0.5)
+            self.imageView.backgroundColor = UIColor.kelpieAccent
         }
+        self.imageView.shadowColor = self.imageView.backgroundColor
     }
 }

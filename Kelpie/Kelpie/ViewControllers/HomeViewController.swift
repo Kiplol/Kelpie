@@ -42,6 +42,8 @@ class HomeViewController: UIViewController {
         self.searchTargets = SearchTarget.all()
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.currentQueryDidChange(_:)),
+                                               name: SearchTarget.currentQueryDidChange, object: nil)
         self.searchTargetsNotificationToken = self.searchTargets
             .observe { [weak self] changes in
                 self?.searchTargetsChanged(changes)
@@ -53,6 +55,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.searchBar.text = SearchTarget.currentQuery
         self.constraintBeneathSearchBarContainer.constant = 20.0
         self.view.layoutIfNeeded()
     }
@@ -62,6 +65,14 @@ class HomeViewController: UIViewController {
         self.constraintBeneathSearchBarContainer.constant = 0.0 - self.view.safeAreaInsets.bottom -
             self.searchBarContainer.bounds.size.height
         self.view.layoutIfNeeded()
+    }
+    
+    // MARK: - Notifications
+    @objc func currentQueryDidChange(_ sender: Any?) {
+        guard let newQuery = (sender as? Notification)?.object as? String else {
+            return
+        }
+        self.searchBar.text = newQuery
     }
     
     // MARK: - Realm

@@ -21,14 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="487" height="65"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="svZ-rj-P2o">
-                                <rect key="frame" x="8" y="8" width="49" height="49"/>
+                                <rect key="frame" x="20" y="27.5" width="10" height="10"/>
                                 <color key="backgroundColor" name="Accent"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="2d1-0M-gg9"/>
                                     <constraint firstAttribute="width" secondItem="svZ-rj-P2o" secondAttribute="height" id="q5W-hd-1Wm"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="If7-mZ-JSU">
-                                <rect key="frame" x="65" y="8" width="66.5" height="48.5"/>
+                                <rect key="frame" x="50" y="8" width="66.5" height="48.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy4-lB-d37">
                                         <rect key="frame" x="0.0" y="0.0" width="66.5" height="31.5"/>
@@ -45,22 +54,18 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="If7-mZ-JSU" secondAttribute="trailing" constant="8" id="7Rn-PF-3DF"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="If7-mZ-JSU" secondAttribute="bottom" constant="8" id="C9g-Ah-O72"/>
-                            <constraint firstItem="svZ-rj-P2o" firstAttribute="top" secondItem="cTR-mO-3nz" secondAttribute="top" constant="8" id="Tj5-JM-OSW"/>
-                            <constraint firstItem="svZ-rj-P2o" firstAttribute="leading" secondItem="cTR-mO-3nz" secondAttribute="leading" constant="8" id="cbZ-35-ujx"/>
-                            <constraint firstItem="If7-mZ-JSU" firstAttribute="leading" secondItem="svZ-rj-P2o" secondAttribute="trailing" constant="8" id="dEv-ba-31m"/>
-                            <constraint firstItem="If7-mZ-JSU" firstAttribute="top" secondItem="svZ-rj-P2o" secondAttribute="top" id="fi5-HL-3t2"/>
-                            <constraint firstAttribute="bottom" secondItem="svZ-rj-P2o" secondAttribute="bottom" constant="8" id="fvl-vl-xQo"/>
+                            <constraint firstItem="svZ-rj-P2o" firstAttribute="centerY" secondItem="cTR-mO-3nz" secondAttribute="centerY" id="Obw-6j-viy"/>
+                            <constraint firstItem="svZ-rj-P2o" firstAttribute="leading" secondItem="cTR-mO-3nz" secondAttribute="leading" constant="20" id="cbZ-35-ujx"/>
+                            <constraint firstItem="If7-mZ-JSU" firstAttribute="leading" secondItem="svZ-rj-P2o" secondAttribute="trailing" constant="20" id="dEv-ba-31m"/>
+                            <constraint firstItem="If7-mZ-JSU" firstAttribute="top" secondItem="cTR-mO-3nz" secondAttribute="top" constant="8" id="wav-sv-DmL"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>

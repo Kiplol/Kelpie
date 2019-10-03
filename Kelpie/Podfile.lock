@@ -5,11 +5,11 @@ PODS:
   - KeyboardObserver (2.1.0)
   - ReadabilityKit (0.7.3):
     - Ji (= 5.0.0)
-  - Realm (3.18.0):
-    - Realm/Headers (= 3.18.0)
-  - Realm/Headers (3.18.0)
-  - RealmSwift (3.18.0):
-    - Realm (= 3.18.0)
+  - Realm (3.19.0):
+    - Realm/Headers (= 3.19.0)
+  - Realm/Headers (3.19.0)
+  - RealmSwift (3.19.0):
+    - Realm (= 3.19.0)
   - SPStorkController (1.7.9)
   - SwiftLint (0.35.0)
 
@@ -23,7 +23,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Gestalt
     - Hue
     - Ji
@@ -40,11 +40,11 @@ SPEC CHECKSUMS:
   Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   KeyboardObserver: 338f87db88f4d6f4b4af334fe025bc824251d57b
   ReadabilityKit: d28ec50a317067fd1c06aa6518b05171bb19ce47
-  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
-  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
+  Realm: 995d585bcf699aaff226715886c849a29dd3d07f
+  RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
   SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
 
 PODFILE CHECKSUM: 28a74c26ad5a151eafc65939f0b356d917ba867c
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.1

@@ -22,7 +22,7 @@ class AdvancedSearchViewController: KelpieViewController {
     // MARK: - ivars
     private let searchTargets = SearchTarget.all()
     private var searchTargetsNotificationToken: NotificationToken?
-    var initialSearchQuery: String? = nil
+    var initialSearchQuery: String?
     
     // MARK: - IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
@@ -97,6 +97,7 @@ extension AdvancedSearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // called when text changes (including clear)
+        SearchTarget.currentQuery = searchText.isEmpty ? nil : searchText
         self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
     }
     
@@ -110,7 +111,7 @@ UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.searchTargets.count + 19
+        return self.searchTargets.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -123,6 +124,16 @@ UICollectionViewDelegateFlowLayout {
     }
     
     // MARK: - UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        defer {
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
+        guard let query = self.searchBar.text, !query.isEmpty else {
+            self.searchBar.becomeFirstResponder()
+            return
+        }
+        self.searchTargets[indexPath.row].executeSearch(query: query)
+    }
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,

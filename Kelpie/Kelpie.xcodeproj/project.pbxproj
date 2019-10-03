@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		340A1D10A45C43A4DBDC0157 /* Pods_Kelpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */; };
+		372444342346790E0000B822 /* KelpieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372444332346790E0000B822 /* KelpieViewController.swift */; };
 		372526FA233872F6001F968A /* SearchTargetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372526F8233872F6001F968A /* SearchTargetCollectionViewCell.swift */; };
 		372526FB233872F6001F968A /* SearchTargetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372526F9233872F6001F968A /* SearchTargetCollectionViewCell.xib */; };
 		372B7D7323241411008CEE51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B7D7223241411008CEE51 /* Constants.swift */; };
@@ -19,13 +20,13 @@
 		37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ECB231EE212008AB2AE /* SearchTarget.swift */; };
 		37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */; };
 		37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */; };
-		37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */; };
 		37C5C0612345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C0602345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift */; };
 		37DED314231F447500438BFC /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DED313231F447500438BFC /* ViewUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EC761379B6826E050D6A149 /* Pods-Kelpie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.release.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.release.xcconfig"; sourceTree = "<group>"; };
+		372444332346790E0000B822 /* KelpieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelpieViewController.swift; sourceTree = "<group>"; };
 		372526F8233872F6001F968A /* SearchTargetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTargetCollectionViewCell.swift; sourceTree = "<group>"; };
 		372526F9233872F6001F968A /* SearchTargetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTargetCollectionViewCell.xib; sourceTree = "<group>"; };
 		372B7D7223241411008CEE51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		37C32ECD231EE5A6008AB2AE /* Kelpie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelpie.entitlements; sourceTree = "<group>"; };
 		37C32ED3231EF365008AB2AE /* GeneralProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralProtocols.swift; sourceTree = "<group>"; };
 		37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
 		37C5C0602345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackingCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		37DED313231F447500438BFC /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
 		8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,9 +132,9 @@
 		37C32ED5231EF982008AB2AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				372444332346790E0000B822 /* KelpieViewController.swift */,
 				37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */,
 				37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */,
-				37C32ED8231F2EE1008AB2AE /* HomeContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,8 +311,8 @@
 				372526FA233872F6001F968A /* SearchTargetCollectionViewCell.swift in Sources */,
 				37DED314231F447500438BFC /* ViewUtilities.swift in Sources */,
 				37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */,
+				372444342346790E0000B822 /* KelpieViewController.swift in Sources */,
 				37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */,
-				37C32ED9231F2EE1008AB2AE /* HomeContainerViewController.swift in Sources */,
 				37C5C0612345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift in Sources */,
 				372B7D7323241411008CEE51 /* Constants.swift in Sources */,
 			);

@@ -19,7 +19,6 @@ class SearchTargetCollectionViewCell: UICollectionViewCell, SearchTargetUpdatabl
     // MARK: - View Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.imageView.backgroundColor = .kelpieAccent
     }
     
     // MARK: - SearchTargetUpdatable

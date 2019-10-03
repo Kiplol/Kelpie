@@ -14,5 +14,4 @@ target 'Kelpie' do
   pod 'KeyboardObserver', '~> 2.1'
   pod 'ReadabilityKit'
   pod 'SPStorkController'
-  pod 'VegaScrollFlowLayout'
 end

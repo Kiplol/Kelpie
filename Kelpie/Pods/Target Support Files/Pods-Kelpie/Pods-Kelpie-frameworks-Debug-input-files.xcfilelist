@@ -7,4 +7,3 @@ ${BUILT_PRODUCTS_DIR}/ReadabilityKit/ReadabilityKit.framework
 ${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
 ${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
 ${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework
-${BUILT_PRODUCTS_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework

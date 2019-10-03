@@ -9,7 +9,6 @@
 import KeyboardObserver
 import RealmSwift
 import UIKit
-import VegaScrollFlowLayout
 
 class AdvancedSearchViewController: UIViewController {
     
@@ -61,9 +60,6 @@ class AdvancedSearchViewController: UIViewController {
     private func prepareCollectionView() {
         let cellNib = UINib(nibName: "SearchTargetCollectionViewCell", bundle: Bundle.main)
         self.collectionView.register(cellNib, forCellWithReuseIdentifier: AdvancedSearchViewController.cellReuseID)
-        if let vegaLayout = self.collectionView.flowLayout as? VegaScrollFlowLayout {
-            vegaLayout.springHardness = 1000
-        }
     }
     
     // MARK: - Realm
@@ -87,6 +83,7 @@ extension AdvancedSearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // called when text changes (including clear)
+        self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { // called when keyboard search button pressed
@@ -99,7 +96,7 @@ UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.searchTargets.count
+        return self.searchTargets.count + 19
     }
     
     func collectionView(_ collectionView: UICollectionView,

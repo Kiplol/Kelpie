@@ -19,11 +19,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-Jt-ijz">
                                 <rect key="frame" x="40" y="84" width="334" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="Accent"/>
+                        <color key="backgroundColor" name="Filled Background"/>
                         <constraints>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="top" secondItem="GJQ-J6-2Rj" secondAttribute="top" constant="40" id="ZC6-q3-RGs"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="40" id="fHK-Ji-x7K"/>
@@ -182,8 +181,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Accent">
-            <color red="0.85490196078431369" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Filled Background">
+            <color red="0.37647058823529411" green="0.51372549019607838" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

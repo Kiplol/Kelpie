@@ -11,7 +11,6 @@ import UIKit
 class StackingCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     // MARK: - ivars
-    private var dynamicAnimator: UIDynamicAnimator!
     
     // MARK: - Initializers
     override init() {
@@ -25,14 +24,10 @@ class StackingCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func commonInit() {
-        self.dynamicAnimator = UIDynamicAnimator(collectionViewLayout: self)
+        //No-op so far
     }
     
     // MARK: - UICollectionViewFlowLayout
-    override func prepare() {
-           super.prepare()
-       }
-    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let traits = super.layoutAttributesForElements(in: rect)
         guard let collectionView = self.collectionView else {
@@ -45,21 +40,18 @@ class StackingCollectionViewFlowLayout: UICollectionViewFlowLayout {
             let t = 1.0 - min(1.0, max(0.0, ((tRange + convertedY) / tRange)))
             let scaleT = max(0.1, 1.0 - (t / 10.0))
             let alphaT = 1.0 - sqrt(t)
-            $0.transform = CGAffineTransform.identity.translatedBy(x: 0.0, y: newY)
+            $0.transform = CGAffineTransform.identity.translatedBy(x: 0.0, y: newY - (10.0 * sqrt(t)))
                 .scaledBy(x: scaleT, y: scaleT)
             $0.alpha = alphaT
-            
-//            let amountPastThreshold = buffer + convertedY
-//            let t = min(1.0, max(0.0, (buffer - amountPastThreshold) / buffer))
-//                        $0.alpha = 1.0 - t
-//            let transformT = max(0.5, 1.0 - (t / 10.0))
-//            $0.transform = CGAffineTransform.identity.translatedBy(x: 0.0, y: newY)
-//                .scaledBy(x: transformT, y: transformT)
         }
         return traits
     }
     
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        guard let collectionView = self.collectionView,
+            collectionView.contentOffset.y > 0 else {
+            return false
+        }
         return true
     }
 

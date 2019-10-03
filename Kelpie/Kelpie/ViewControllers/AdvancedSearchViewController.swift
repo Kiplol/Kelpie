@@ -118,5 +118,4 @@ UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.usableWidth(), height: 60.0)
     }
-    
 }

@@ -52,7 +52,7 @@ fileprivate extension AppDelegate {
     }
     
     func themeApp() {
-        self.window?.tintColor = UIColor.kelpieMint
+        self.window?.tintColor = UIColor.kelpieAccent
     }
     
 }

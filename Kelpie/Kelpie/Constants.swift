@@ -12,6 +12,6 @@ import UIKit
 
 extension UIColor {
     
-    class var kelpieMint: UIColor { return UIColor(hex: "#DAF6F9") }
+    class var kelpieAccent: UIColor { return UIColor(named: "Accent")! }
     
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.27880199244507764" green="0.39605805837563457" blue="0.38027617585892776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Accent"/>
                         <constraints>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="top" secondItem="GJQ-J6-2Rj" secondAttribute="top" constant="40" id="ZC6-q3-RGs"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="40" id="fHK-Ji-x7K"/>
@@ -72,7 +73,6 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="EbZ-sn-gZZ" firstAttribute="leading" secondItem="Od0-dA-3Es" secondAttribute="leading" id="ANO-xg-GBn"/>
                                     <constraint firstAttribute="trailing" secondItem="EbZ-sn-gZZ" secondAttribute="trailing" id="Vmr-Ng-lFI"/>
@@ -144,7 +144,7 @@
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F3L-4g-mJg">
                                 <rect key="frame" x="0.0" y="132" width="414" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="qnx-t2-QIU" customClass="VegaScrollFlowLayout" customModule="VegaScrollFlowLayout">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="qnx-t2-QIU" customClass="StackingCollectionViewFlowLayout" customModule="Kelpie" customModuleProvider="target">
                                     <size key="itemSize" width="104" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -157,7 +157,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="F3L-4g-mJg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lO-OK-CiF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rao-Yt-MKX" secondAttribute="trailing" constant="10" id="Bhg-Y9-Wtf"/>
@@ -181,4 +181,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Accent">
+            <color red="0.85490196078431369" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

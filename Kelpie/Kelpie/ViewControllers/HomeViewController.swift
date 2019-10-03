@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
             .observe { [weak self] changes in
                 self?.searchTargetsChanged(changes)
         }
-        let bg = [UIColor.kelpieMint, UIColor.kelpieMint.darker].gradient()
+        let bg = [UIColor.kelpieAccent, UIColor.kelpieAccent.darker].gradient()
         bg.frame = self.view.bounds
         self.view.layer.insertSublayer(bg, at: 0)
     }

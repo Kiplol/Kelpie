@@ -19,7 +19,7 @@ class SearchTargetCollectionViewCell: UICollectionViewCell, SearchTargetUpdatabl
     // MARK: - View Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.imageView.backgroundColor = .kelpieMint
+        self.imageView.backgroundColor = .kelpieAccent
     }
     
     // MARK: - SearchTargetUpdatable
@@ -32,7 +32,7 @@ class SearchTargetCollectionViewCell: UICollectionViewCell, SearchTargetUpdatabl
         if let colorString = searchTarget.colorHex {
             self.mainContainer.borderColor = UIColor(hex: colorString).alpha(0.5)
         } else {
-            self.mainContainer.borderColor = UIColor.kelpieMint.alpha(0.5)
+            self.mainContainer.borderColor = UIColor.kelpieAccent.alpha(0.5)
         }
     }
 }

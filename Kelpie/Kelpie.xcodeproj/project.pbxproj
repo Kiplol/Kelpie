@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		340A1D10A45C43A4DBDC0157 /* Pods_Kelpie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */; };
 		372444342346790E0000B822 /* KelpieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372444332346790E0000B822 /* KelpieViewController.swift */; };
+		372444362346B88C0000B822 /* default_search_targets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 372444352346B88C0000B822 /* default_search_targets.plist */; };
 		372526FA233872F6001F968A /* SearchTargetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372526F8233872F6001F968A /* SearchTargetCollectionViewCell.swift */; };
 		372526FB233872F6001F968A /* SearchTargetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372526F9233872F6001F968A /* SearchTargetCollectionViewCell.xib */; };
 		372B7D7323241411008CEE51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B7D7223241411008CEE51 /* Constants.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0EC761379B6826E050D6A149 /* Pods-Kelpie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.release.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.release.xcconfig"; sourceTree = "<group>"; };
 		372444332346790E0000B822 /* KelpieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelpieViewController.swift; sourceTree = "<group>"; };
+		372444352346B88C0000B822 /* default_search_targets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_search_targets.plist; sourceTree = "<group>"; };
 		372526F8233872F6001F968A /* SearchTargetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTargetCollectionViewCell.swift; sourceTree = "<group>"; };
 		372526F9233872F6001F968A /* SearchTargetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTargetCollectionViewCell.xib; sourceTree = "<group>"; };
 		372B7D7223241411008CEE51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		37C32EB7231ECB2E008AB2AE /* Kelpie */ = {
 			isa = PBXGroup;
 			children = (
+				372444352346B88C0000B822 /* default_search_targets.plist */,
 				372B7D7223241411008CEE51 /* Constants.swift */,
 				37C32ECD231EE5A6008AB2AE /* Kelpie.entitlements */,
 				37C32EBC231ECB2E008AB2AE /* Main.storyboard */,
@@ -234,6 +237,7 @@
 				37C32EC3231ECB30008AB2AE /* LaunchScreen.storyboard in Resources */,
 				37C32EC0231ECB30008AB2AE /* Assets.xcassets in Resources */,
 				37C32EBE231ECB2E008AB2AE /* Main.storyboard in Resources */,
+				372444362346B88C0000B822 /* default_search_targets.plist in Resources */,
 				372526FB233872F6001F968A /* SearchTargetCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -74,10 +74,25 @@ class AdvancedSearchViewController: KelpieViewController {
         self.collectionView.register(cellNib, forCellWithReuseIdentifier: AdvancedSearchViewController.cellReuseID)
     }
     
+    // MARK: - Keyboard
+    override func keyboardDidChange(event: KeyboardEvent) {
+        switch event.type {
+        case .willShow, .willHide, .willChangeFrame:
+            let keyboardFrameEnd = event.keyboardFrameEnd
+            let height = max(self.view.safeAreaInsets.bottom, self.view.bounds.size.height -
+                keyboardFrameEnd.origin.y + self.view.safeAreaInsets.bottom + 20.0)
+            self.collectionView.contentInset.bottom = height
+            self.collectionView.verticalScrollIndicatorInsets.bottom = height - 20.0
+        default:
+            break
+        }
+
+    }
+    
     // MARK: - Realm
     private func searchTargetsChanged(_ changes: RealmCollectionChange<Results<SearchTarget>>) {
         guard self.isViewLoaded else { return }
-        self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
+        self.collectionView.reloadData()
     }
 }
 
@@ -98,7 +113,7 @@ extension AdvancedSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // called when text changes (including clear)
         SearchTarget.currentQuery = searchText.isEmpty ? nil : searchText
-        self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
+        self.collectionView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { // called when keyboard search button pressed
@@ -116,7 +131,7 @@ UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let searchTarget = self.searchTargets[0]
+        let searchTarget = self.searchTargets[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvancedSearchViewController.cellReuseID,
                                                       for: indexPath)
         (cell as? SearchTargetUpdatable)?.update(searchTarget: searchTarget, query: self.searchBar.text)

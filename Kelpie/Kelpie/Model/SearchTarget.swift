@@ -37,6 +37,15 @@ class SearchTarget: Object {
         self.colorHex = colorHex
     }
     
+    convenience init?(values: [String: AnyHashable]) {
+        guard let name = values["name"] as? String,
+            let url = values["url"] as? String else {
+                return nil
+        }
+        let colorHex = values["color"] as? String
+        self.init(name: name, url: url, colorHex: colorHex)
+    }
+    
     // MARK: - Business Logic
     func executeSearch(query: String) {
         let escaped = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
@@ -76,8 +85,31 @@ extension SearchTarget: LaunchPreparable {
         return imdb
     }
     
+    class func getOrMakeDefaults() {
+        guard let plistPath = Bundle.main.path(forResource: "default_search_targets", ofType: "plist") else {
+            return
+        }
+        guard let contents = NSDictionary(contentsOfFile: plistPath) as? [String: AnyHashable],
+            let dicts = contents["searchTargets"] as? [[String: AnyHashable]] else {
+                return
+        }
+        let realm = try! Realm()
+        try! realm.write {
+            dicts.filter {
+                guard let name = $0["name"] as? String else {
+                    return false
+                }
+                return SearchTarget.named(name) == nil
+            }.forEach {
+                if let newTarget = SearchTarget(values: $0) {
+                    realm.add(newTarget)
+                }
+            }
+        }
+    }
+    
     // MARK: - LaunchPreparable
     static func prepareAtAppLaunch() {
-        _ = self.getOrMakeIMDb()
+        _ = self.getOrMakeDefaults()
     }
 }

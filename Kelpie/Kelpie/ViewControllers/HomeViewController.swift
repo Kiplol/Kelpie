@@ -75,6 +75,13 @@ class HomeViewController: UIViewController {
         self.view.layoutIfNeeded()
     }
     
+    // MARK: -
+    fileprivate func showSearchVC() {
+        let searchVC = AdvancedSearchViewController.fromStoryboard()
+        searchVC.initialSearchQuery = self.searchBar.text
+        self.present(searchVC, animated: true, completion: nil)
+    }
+    
     // MARK: - Notifications
     @objc func currentQueryDidChange(_ sender: Any?) {
         guard let newQuery = (sender as? Notification)?.object as? String else {
@@ -91,11 +98,9 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UISearchBarDelegate {
-
+    
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        let searchVC = AdvancedSearchViewController.fromStoryboard()
-        searchVC.initialSearchQuery = self.searchBar.text
-        self.present(searchVC, animated: true, completion: nil)
+        self.showSearchVC()
         return false
     }
     
@@ -122,10 +127,17 @@ extension HomeViewController {
             let newCenter = CGPoint(x: self.searchBarContainer.center.x + translation.x,
                                     y: self.searchBarContainer.center.y + translation.y)
             let distance = newCenter.distance(from: self.snappingBehavior.snapPoint)
-//            print(distance)
-            self.searchBarContainer.center = CGPoint(x: self.searchBarContainer.center.x + translation.x,
-                                                     y: self.searchBarContainer.center.y + translation.y)
+            let maxDistance: CGFloat = 80.0
+            let t = distance / maxDistance
+            let penis = max(0.0, min(1.0, 1.0 - pow(t, 2.0)))
+            self.searchBarContainer.center = CGPoint(x: self.searchBarContainer.center.x + (translation.x * penis),
+                                                     y: self.searchBarContainer.center.y + (translation.y * penis))
             recognizer.setTranslation(.zero, in: self.view)
+            
+            print(self.searchBarContainer.center.y, self.snappingBehavior.snapPoint.y - maxDistance)
+            if self.searchBarContainer.center.y <= self.snappingBehavior.snapPoint.y - maxDistance + 10.0 {
+                self.showSearchVC()
+            }
         case .ended, .cancelled, .failed:
             self.animator.addBehavior(self.snappingBehavior)
         default:

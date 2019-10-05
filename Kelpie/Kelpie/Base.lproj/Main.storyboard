@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,6 +21,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-Z5-3o9">
+                                <rect key="frame" x="10" y="251" width="394" height="394"/>
+                                <subviews>
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-CN-5hM">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="394"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="fqu-G5-dm8" kind="embed" id="Vqs-Zq-Ifm"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xxb-CN-5hM" firstAttribute="leading" secondItem="cxy-Z5-3o9" secondAttribute="leading" id="EcN-nE-k7W"/>
+                                    <constraint firstAttribute="bottom" secondItem="xxb-CN-5hM" secondAttribute="bottom" id="FYi-Qp-DFm"/>
+                                    <constraint firstAttribute="trailing" secondItem="xxb-CN-5hM" secondAttribute="trailing" id="O4K-fi-FZV"/>
+                                    <constraint firstAttribute="width" secondItem="cxy-Z5-3o9" secondAttribute="height" multiplier="1:1" id="X7z-wC-RD4"/>
+                                    <constraint firstItem="xxb-CN-5hM" firstAttribute="top" secondItem="cxy-Z5-3o9" secondAttribute="top" id="iIm-uW-Zot"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwD-o1-MKu" userLabel="Search Bar Container">
                                 <rect key="frame" x="10" y="766" width="394" height="76"/>
                                 <subviews>
@@ -59,38 +97,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NHf-Hf-GIU">
-                                <rect key="frame" x="0.0" y="135.5" width="414" height="610.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZS9-1W-RvC">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="43K-OV-iyS">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dCN-vb-uqy">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" name="Filled Background"/>
                         <constraints>
                             <constraint firstItem="GJQ-J6-2Rj" firstAttribute="bottom" secondItem="JwD-o1-MKu" secondAttribute="bottom" constant="20" id="8Dx-X8-JKq"/>
                             <constraint firstItem="GJQ-J6-2Rj" firstAttribute="trailing" secondItem="JwD-o1-MKu" secondAttribute="trailing" constant="10" id="Cbc-rO-v7y"/>
-                            <constraint firstItem="GJQ-J6-2Rj" firstAttribute="trailing" secondItem="NHf-Hf-GIU" secondAttribute="trailing" id="HLJ-vQ-qwA"/>
-                            <constraint firstItem="JwD-o1-MKu" firstAttribute="top" secondItem="NHf-Hf-GIU" secondAttribute="bottom" constant="20" id="HRX-oV-a2C"/>
-                            <constraint firstItem="NHf-Hf-GIU" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" id="UU6-Lw-Co8"/>
+                            <constraint firstItem="cxy-Z5-3o9" firstAttribute="centerX" secondItem="aI1-tX-kaT" secondAttribute="centerX" id="J0b-dP-sYY"/>
+                            <constraint firstItem="cxy-Z5-3o9" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="10" id="Z8F-Tb-k6d"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="top" secondItem="GJQ-J6-2Rj" secondAttribute="top" constant="40" id="ZC6-q3-RGs"/>
                             <constraint firstItem="JwD-o1-MKu" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="10" id="Zis-cW-YhZ"/>
-                            <constraint firstItem="NHf-Hf-GIU" firstAttribute="top" secondItem="3ae-Jt-ijz" secondAttribute="bottom" constant="20" id="dxC-Fp-x7N"/>
+                            <constraint firstItem="cxy-Z5-3o9" firstAttribute="centerY" secondItem="aI1-tX-kaT" secondAttribute="centerY" id="e6E-IE-ncG"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="40" id="fHK-Ji-x7K"/>
+                            <constraint firstItem="GJQ-J6-2Rj" firstAttribute="trailing" secondItem="cxy-Z5-3o9" secondAttribute="trailing" constant="10" id="oIA-KC-EMC"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="centerX" secondItem="aI1-tX-kaT" secondAttribute="centerX" id="w9O-dd-QHd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GJQ-J6-2Rj"/>
@@ -164,10 +182,24 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HQx-wb-UKg">
+            <objects>
+                <viewController id="fqu-G5-dm8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ks-HJ-CWW">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="394"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vc-3i-zQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="-589"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="Filled Background">
-            <color red="0.15031254990853093" green="0.20455012155815669" blue="0.2104719536926446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15000000596046448" green="0.20499999821186066" blue="0.20999999344348907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

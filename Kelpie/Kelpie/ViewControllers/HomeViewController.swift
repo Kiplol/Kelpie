@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     // MARK: - ivars
     private var searchTargets: Results<SearchTarget>!
     private var searchTargetsNotificationToken: NotificationToken?
+    private var animator: UIDynamicAnimator!
+    private var snappingBehavior: UISnapBehavior!
     
     // MARK: - IBOutlets
     @IBOutlet weak var labelStats: UILabel!
@@ -58,6 +60,7 @@ class HomeViewController: UIViewController {
         self.searchBar.text = SearchTarget.currentQuery
         self.constraintBeneathSearchBarContainer.constant = 20.0
         self.view.layoutIfNeeded()
+//        self.setUpSnapBehavior()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -89,6 +92,41 @@ extension HomeViewController: UISearchBarDelegate {
         searchVC.initialSearchQuery = self.searchBar.text
         self.present(searchVC, animated: true, completion: nil)
         return false
+    }
+    
+}
+
+extension HomeViewController {
+    
+    private func setUpSnapBehavior() {
+        guard self.animator == nil else { return }
+        self.animator = UIDynamicAnimator(referenceView: self.view)
+        self.snappingBehavior = UISnapBehavior(item: self.searchBarContainer,
+                                               snapTo: self.searchBarContainer.center)
+        self.animator.addBehavior(self.snappingBehavior)
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self,
+                                                          action: #selector(HomeViewController.pannedView(recognizer:)))
+        self.searchBarContainer.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    @objc func pannedView(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            self.animator.removeBehavior(self.snappingBehavior)
+        case .changed:
+            let translation = recognizer.translation(in: self.view)
+            let newCenter = CGPoint(x: self.searchBarContainer.center.x + translation.x,
+            y: self.searchBarContainer.center.y + translation.y)
+            let distance = newCenter.distance(from: self.snappingBehavior.snapPoint)
+            print(distance)
+            self.searchBarContainer.center = CGPoint(x: self.searchBarContainer.center.x + translation.x,
+                                                     y: self.searchBarContainer.center.y + translation.y)
+            recognizer.setTranslation(.zero, in: self.view)
+        case .ended, .cancelled, .failed:
+            self.animator.addBehavior(self.snappingBehavior)
+        default:
+            break
+        }
     }
     
 }

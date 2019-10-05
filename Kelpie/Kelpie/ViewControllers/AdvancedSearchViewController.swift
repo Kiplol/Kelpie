@@ -20,7 +20,7 @@ class AdvancedSearchViewController: KelpieViewController {
     "AdvancedSearchViewController.didBecomeResignResponder")
     
     // MARK: - ivars
-    private let searchTargets = SearchTarget.all()
+    private let searchTargets = SearchTarget.all().sorted(byKeyPath: "lastUsed", ascending: false)
     private var searchTargetsNotificationToken: NotificationToken?
     var initialSearchQuery: String?
     

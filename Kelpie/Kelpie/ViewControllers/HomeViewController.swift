@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     private var searchTargetsNotificationToken: NotificationToken?
     private var animator: UIDynamicAnimator!
     private var snappingBehavior: UISnapBehavior!
+    private var firstAppearance = true
     
     // MARK: - IBOutlets
     @IBOutlet weak var labelStats: UILabel!
@@ -53,6 +54,8 @@ class HomeViewController: UIViewController {
         let bg = [UIColor.black.alpha(0.0), UIColor.black.alpha(0.4)].gradient()
         bg.frame = self.view.bounds
         self.view.layer.insertSublayer(bg, at: 0)
+        
+        self.showSearchVC()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +63,14 @@ class HomeViewController: UIViewController {
         self.searchBar.text = SearchTarget.currentQuery
         self.constraintBeneathSearchBarContainer.constant = 20.0
         self.view.layoutIfNeeded()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.firstAppearance {
+            self.showSearchVC()
+        }
+        self.firstAppearance = false
     }
     
     override func viewDidLayoutSubviews() {

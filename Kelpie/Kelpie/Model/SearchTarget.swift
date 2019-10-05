@@ -29,6 +29,7 @@ class SearchTarget: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var url: String = "kelpie://"
     @objc dynamic var colorHex: String?
+    @objc dynamic var lastUsed: Date = .distantPast
     
     convenience init(name: String, url: String, colorHex: String? = nil) {
         self.init()
@@ -54,6 +55,14 @@ class SearchTarget: Object {
             return
         }
         UIApplication.shared.open(resultURL, options: [:], completionHandler: nil)
+        self.markUsed()
+    }
+    
+    func markUsed() {
+        let realm = try! Realm()
+        try! realm.write {
+            self.lastUsed = Date()
+        }
     }
     
     // MARK: - DB

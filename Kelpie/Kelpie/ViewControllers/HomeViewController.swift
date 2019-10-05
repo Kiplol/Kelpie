@@ -60,7 +60,12 @@ class HomeViewController: UIViewController {
         self.searchBar.text = SearchTarget.currentQuery
         self.constraintBeneathSearchBarContainer.constant = 20.0
         self.view.layoutIfNeeded()
-//        self.setUpSnapBehavior()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setUpSnapBehavior()
+        self.snappingBehavior.snapPoint = self.searchBarContainer.center
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -103,7 +108,6 @@ extension HomeViewController {
         self.animator = UIDynamicAnimator(referenceView: self.view)
         self.snappingBehavior = UISnapBehavior(item: self.searchBarContainer,
                                                snapTo: self.searchBarContainer.center)
-        self.animator.addBehavior(self.snappingBehavior)
         let panGestureRecognizer = UIPanGestureRecognizer(target: self,
                                                           action: #selector(HomeViewController.pannedView(recognizer:)))
         self.searchBarContainer.addGestureRecognizer(panGestureRecognizer)
@@ -116,9 +120,9 @@ extension HomeViewController {
         case .changed:
             let translation = recognizer.translation(in: self.view)
             let newCenter = CGPoint(x: self.searchBarContainer.center.x + translation.x,
-            y: self.searchBarContainer.center.y + translation.y)
+                                    y: self.searchBarContainer.center.y + translation.y)
             let distance = newCenter.distance(from: self.snappingBehavior.snapPoint)
-            print(distance)
+//            print(distance)
             self.searchBarContainer.center = CGPoint(x: self.searchBarContainer.center.x + translation.x,
                                                      y: self.searchBarContainer.center.y + translation.y)
             recognizer.setTranslation(.zero, in: self.view)

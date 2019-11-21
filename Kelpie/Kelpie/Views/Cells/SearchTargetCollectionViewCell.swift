@@ -26,9 +26,6 @@ class SearchTargetCollectionViewCell: UICollectionViewCell, SearchTargetUpdatabl
     func update(searchTarget: SearchTarget, query: String?) {
         self.labelTitle.text = searchTarget.name
         self.labelDescription.text = "Search \(searchTarget.name)"
-        if let query = query, !query.isEmpty {
-            self.labelDescription.text? += " for \(query)"
-        }
         if let colorString = searchTarget.colorHex {
             self.imageView.backgroundColor = UIColor(hex: colorString)
         } else {

@@ -3,15 +3,15 @@ PODS:
   - Hue (5.0.0)
   - Ji (5.0.0)
   - KeyboardObserver (2.1.0)
-  - ReadabilityKit (0.7.3):
+  - ReadabilityKit (0.7.4):
     - Ji (= 5.0.0)
-  - Realm (3.19.0):
-    - Realm/Headers (= 3.19.0)
-  - Realm/Headers (3.19.0)
-  - RealmSwift (3.19.0):
-    - Realm (= 3.19.0)
+  - Realm (4.3.1):
+    - Realm/Headers (= 4.3.1)
+  - Realm/Headers (4.3.1)
+  - RealmSwift (4.3.1):
+    - Realm (= 4.3.1)
   - SPStorkController (1.7.9)
-  - SwiftLint (0.35.0)
+  - SwiftLint (0.38.2)
 
 DEPENDENCIES:
   - Gestalt (~> 2.0.0)
@@ -39,11 +39,11 @@ SPEC CHECKSUMS:
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
   Ji: d795fed288fe78658b404c88946d753b17d8d7f4
   KeyboardObserver: 338f87db88f4d6f4b4af334fe025bc824251d57b
-  ReadabilityKit: d28ec50a317067fd1c06aa6518b05171bb19ce47
-  Realm: 995d585bcf699aaff226715886c849a29dd3d07f
-  RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
+  ReadabilityKit: 09e8b2ecb3d06f17f4c856e426c34f9016e86e6f
+  Realm: 31dc40934081ef740f60feedc46d88473cbfeb40
+  RealmSwift: b5199e9a41f67b99f51acf6874a6166f5fbe93d1
   SPStorkController: 36bd84206267232747b19d48852659bd71ede28f
-  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
 
 PODFILE CHECKSUM: 28a74c26ad5a151eafc65939f0b356d917ba867c
 

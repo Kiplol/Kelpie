@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4u-cD-rT2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4u-cD-rT2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-Jt-ijz">
-                                <rect key="frame" x="40" y="84" width="334" height="31.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-Z5-3o9">
-                                <rect key="frame" x="10" y="251" width="394" height="394"/>
+                                <rect key="frame" x="10" y="170" width="394" height="556"/>
                                 <subviews>
                                     <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-CN-5hM">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="394"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="556"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -42,7 +42,6 @@
                                     <constraint firstItem="xxb-CN-5hM" firstAttribute="leading" secondItem="cxy-Z5-3o9" secondAttribute="leading" id="EcN-nE-k7W"/>
                                     <constraint firstAttribute="bottom" secondItem="xxb-CN-5hM" secondAttribute="bottom" id="FYi-Qp-DFm"/>
                                     <constraint firstAttribute="trailing" secondItem="xxb-CN-5hM" secondAttribute="trailing" id="O4K-fi-FZV"/>
-                                    <constraint firstAttribute="width" secondItem="cxy-Z5-3o9" secondAttribute="height" multiplier="1:1" id="X7z-wC-RD4"/>
                                     <constraint firstItem="xxb-CN-5hM" firstAttribute="top" secondItem="cxy-Z5-3o9" secondAttribute="top" id="iIm-uW-Zot"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -103,6 +102,8 @@
                             <constraint firstItem="GJQ-J6-2Rj" firstAttribute="bottom" secondItem="JwD-o1-MKu" secondAttribute="bottom" constant="20" id="8Dx-X8-JKq"/>
                             <constraint firstItem="GJQ-J6-2Rj" firstAttribute="trailing" secondItem="JwD-o1-MKu" secondAttribute="trailing" constant="10" id="Cbc-rO-v7y"/>
                             <constraint firstItem="cxy-Z5-3o9" firstAttribute="centerX" secondItem="aI1-tX-kaT" secondAttribute="centerX" id="J0b-dP-sYY"/>
+                            <constraint firstItem="JwD-o1-MKu" firstAttribute="top" secondItem="cxy-Z5-3o9" secondAttribute="bottom" constant="40" id="NYe-8C-zUp"/>
+                            <constraint firstItem="cxy-Z5-3o9" firstAttribute="top" secondItem="3ae-Jt-ijz" secondAttribute="bottom" constant="40" id="VLr-Ju-fwr"/>
                             <constraint firstItem="cxy-Z5-3o9" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="10" id="Z8F-Tb-k6d"/>
                             <constraint firstItem="3ae-Jt-ijz" firstAttribute="top" secondItem="GJQ-J6-2Rj" secondAttribute="top" constant="40" id="ZC6-q3-RGs"/>
                             <constraint firstItem="JwD-o1-MKu" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="10" id="Zis-cW-YhZ"/>
@@ -158,14 +159,55 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pyD-UX-gWB"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBm-Xm-Bxs">
+                                <rect key="frame" x="0.0" y="726" width="414" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4wu-WI-Wse">
+                                        <rect key="frame" x="309" y="0.0" width="85" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyY-oV-8Pn" userLabel="Button Paste">
+                                                <rect key="frame" x="0.0" y="0.0" width="35.5" height="60"/>
+                                                <color key="tintColor" name="Toolbar Button"/>
+                                                <state key="normal" image="rectangle.and.paperclip" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pasteTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYl-J3-vdO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVT-Ov-qKp" userLabel="Button Clear">
+                                                <rect key="frame" x="55.5" y="0.0" width="29.5" height="60"/>
+                                                <color key="tintColor" name="Toolbar Button"/>
+                                                <state key="normal" image="clear.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5G-gm-rtz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="4wu-WI-Wse" firstAttribute="top" secondItem="MBm-Xm-Bxs" secondAttribute="top" id="2oL-Iu-amL"/>
+                                    <constraint firstAttribute="bottom" secondItem="4wu-WI-Wse" secondAttribute="bottom" id="KLp-k3-f2A"/>
+                                    <constraint firstAttribute="trailing" secondItem="4wu-WI-Wse" secondAttribute="trailing" constant="20" id="STM-f8-vJv"/>
+                                    <constraint firstItem="4wu-WI-Wse" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MBm-Xm-Bxs" secondAttribute="leading" constant="20" id="kXN-Gl-yEA"/>
+                                    <constraint firstAttribute="height" constant="60" id="qPQ-tZ-L1d"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MBm-Xm-Bxs" secondAttribute="bottom" placeholder="YES" id="4mq-eU-S6V"/>
                             <constraint firstItem="F3L-4g-mJg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lO-OK-CiF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rao-Yt-MKX" secondAttribute="trailing" constant="10" id="Bhg-Y9-Wtf"/>
                             <constraint firstItem="F3L-4g-mJg" firstAttribute="top" secondItem="rao-Yt-MKX" secondAttribute="bottom" constant="16" id="Cj4-aQ-uUN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F3L-4g-mJg" secondAttribute="trailing" id="QSr-ah-ttp"/>
+                            <constraint firstItem="MBm-Xm-Bxs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RZC-hH-HtV"/>
                             <constraint firstItem="rao-Yt-MKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="U7e-gz-02D"/>
+                            <constraint firstItem="MBm-Xm-Bxs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cap-2P-rgM"/>
                             <constraint firstItem="rao-Yt-MKX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="r11-F6-Vgq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F3L-4g-mJg" secondAttribute="bottom" id="vFc-Bm-3fZ"/>
                         </constraints>
@@ -176,22 +218,45 @@
                     <connections>
                         <outlet property="collectionView" destination="F3L-4g-mJg" id="eST-aG-m3a"/>
                         <outlet property="searchBar" destination="rao-Yt-MKX" id="7yD-Nx-qfO"/>
+                        <outlet property="toolbarView" destination="MBm-Xm-Bxs" id="gNO-l8-NGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--History View Controller-->
         <scene sceneID="HQx-wb-UKg">
             <objects>
-                <viewController id="fqu-G5-dm8" sceneMemberID="viewController">
+                <viewController id="fqu-G5-dm8" customClass="HistoryViewController" customModule="Kelpie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ks-HJ-CWW">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="394"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="feY-70-aSE">
+                                <rect key="frame" x="20" y="44" width="354" height="512"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="evp-FV-a2U" customClass="StackingCollectionViewFlowLayout" customModule="Kelpie" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="feY-70-aSE" firstAttribute="leading" secondItem="9Ks-HJ-CWW" secondAttribute="leadingMargin" id="WtX-Xw-hh1"/>
+                            <constraint firstItem="feY-70-aSE" firstAttribute="top" secondItem="9Ks-HJ-CWW" secondAttribute="topMargin" id="dFz-zc-K18"/>
+                            <constraint firstItem="feY-70-aSE" firstAttribute="bottom" secondItem="9Ks-HJ-CWW" secondAttribute="bottomMargin" id="wZU-fY-nQo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="feY-70-aSE" secondAttribute="trailing" id="yNv-oE-USY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NV4-7k-dWx"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="feY-70-aSE" id="ZVA-2y-fOv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vc-3i-zQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,8 +264,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear.fill" catalog="system" width="64" height="56"/>
+        <image name="rectangle.and.paperclip" catalog="system" width="64" height="50"/>
         <namedColor name="Filled Background">
             <color red="0.75294117647058822" green="0.84313725490196079" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Toolbar Button">
+            <color red="0.15000000596046448" green="0.20499999821186066" blue="0.20999999344348907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

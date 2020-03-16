@@ -27,6 +27,7 @@ class AdvancedSearchViewController: KelpieViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var toolbarView: UIView!
     
     // MARK: - Helper
     class func fromStoryboard() -> AdvancedSearchViewController {
@@ -51,6 +52,8 @@ class AdvancedSearchViewController: KelpieViewController {
                 self?.searchTargetsChanged(changes)
         }
         self.searchBar.text = self.initialSearchQuery
+        self.toolbarView.removeFromSuperview()
+        self.searchBar.searchTextField.inputAccessoryView = self.toolbarView
     }
     
     override func viewWillLayoutSubviews() {
@@ -86,7 +89,19 @@ class AdvancedSearchViewController: KelpieViewController {
         default:
             break
         }
-
+    }
+    
+    @IBAction func clearTapped(_ sender: Any) {
+        self.searchBar.text = nil
+        self.searchBar(self.searchBar, textDidChange: "")
+    }
+    
+    @IBAction func pasteTapped(_ sender: Any) {
+        guard let pasteboardString = UIPasteboard.general.string else {
+            return
+        }
+        self.searchBar.text = pasteboardString
+        self.searchBar(self.searchBar, textDidChange: pasteboardString)
     }
     
     // MARK: - Realm

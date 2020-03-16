@@ -14,6 +14,9 @@
 		372526FA233872F6001F968A /* SearchTargetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372526F8233872F6001F968A /* SearchTargetCollectionViewCell.swift */; };
 		372526FB233872F6001F968A /* SearchTargetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372526F9233872F6001F968A /* SearchTargetCollectionViewCell.xib */; };
 		372B7D7323241411008CEE51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B7D7223241411008CEE51 /* Constants.swift */; };
+		37B693FF241C34F60097A576 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B693FE241C34F60097A576 /* HistoryViewController.swift */; };
+		37B69401241C367D0097A576 /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B69400241C367D0097A576 /* SearchHistory.swift */; };
+		37B69403241C396E0097A576 /* RealmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B69402241C396E0097A576 /* RealmUtils.swift */; };
 		37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */; };
 		37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */; };
 		37C32EBE231ECB2E008AB2AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C32EBC231ECB2E008AB2AE /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 		372526F8233872F6001F968A /* SearchTargetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTargetCollectionViewCell.swift; sourceTree = "<group>"; };
 		372526F9233872F6001F968A /* SearchTargetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTargetCollectionViewCell.xib; sourceTree = "<group>"; };
 		372B7D7223241411008CEE51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		37B693FE241C34F60097A576 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		37B69400241C367D0097A576 /* SearchHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
+		37B69402241C396E0097A576 /* RealmUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtils.swift; sourceTree = "<group>"; };
 		37C32EB5231ECB2E008AB2AE /* Kelpie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelpie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C32EB8231ECB2E008AB2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				37C32ECB231EE212008AB2AE /* SearchTarget.swift */,
+				37B69400241C367D0097A576 /* SearchHistory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 				372444332346790E0000B822 /* KelpieViewController.swift */,
 				37C32EBA231ECB2E008AB2AE /* AdvancedSearchViewController.swift */,
 				37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */,
+				37B693FE241C34F60097A576 /* HistoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 		37C5C0622345256A002F0DF2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				37B69402241C396E0097A576 /* RealmUtils.swift */,
 				37C5C0602345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift */,
 				371492C22349272700150CC0 /* KipUtils.swift */,
 			);
@@ -315,6 +324,8 @@
 				37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */,
 				371492C32349272700150CC0 /* KipUtils.swift in Sources */,
 				37C32ED4231EF365008AB2AE /* GeneralProtocols.swift in Sources */,
+				37B69401241C367D0097A576 /* SearchHistory.swift in Sources */,
+				37B693FF241C34F60097A576 /* HistoryViewController.swift in Sources */,
 				37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */,
 				372526FA233872F6001F968A /* SearchTargetCollectionViewCell.swift in Sources */,
 				37DED314231F447500438BFC /* ViewUtilities.swift in Sources */,
@@ -323,6 +334,7 @@
 				37C32EB9231ECB2E008AB2AE /* AppDelegate.swift in Sources */,
 				37C5C0612345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift in Sources */,
 				372B7D7323241411008CEE51 /* Constants.swift in Sources */,
+				37B69403241C396E0097A576 /* RealmUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

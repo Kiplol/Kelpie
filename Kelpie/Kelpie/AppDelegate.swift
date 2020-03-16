@@ -54,6 +54,7 @@ fileprivate extension AppDelegate {
     
     func themeApp() {
         self.window?.tintColor = UIColor.kelpieAccent
+//        UIButton.appearance().tintColor = .kelpieAccent
     }
     
 }

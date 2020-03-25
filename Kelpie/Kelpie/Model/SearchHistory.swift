@@ -25,10 +25,21 @@ class SearchHistory: Object {
     
     // MARK: -
     func execute() {
-        Realm.makeChanges {
-            self.lastUsed = Date()
-        }
+        self.markUsed()
         self.searchTarget.executeSearch(query: self.query)
+    }
+    
+    func markUsed(at date: Date = Date()) {
+        let realm = try! Realm()
+        try! realm.write {
+            self.lastUsed = date
+        }
+    }
+    
+    class func query(query: String, searchTarget: SearchTarget) -> SearchHistory? {
+        let realm = try! Realm()
+        return realm.objects(self).filter("searchTarget = %@", searchTarget)
+            .filter("query contains[c] %@", query).first
     }
     
     // MARK: - Helpers

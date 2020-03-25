@@ -12,6 +12,9 @@ import UIKit
 class HistoryViewController: KelpieViewController, UICollectionViewDataSource, UICollectionViewDelegate,
 UICollectionViewDelegateFlowLayout {
     
+    // MARK: -
+    private class var reuseIDSearchHistory: String { return "searchHistory" }
+    
     // MARK: - ivars
     private let searchHistories = SearchHistory.allSortedByDate()
     private var searchHistoriesNotificationToken: NotificationToken?
@@ -38,7 +41,10 @@ UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        fatalError("@TODO")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HistoryViewController.reuseIDSearchHistory,
+                                                      for: indexPath)
+        let history = self.searchHistories[indexPath.row]
+        return cell
     }
     
     // MARK: - UICollectionViewDelegate

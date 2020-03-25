@@ -145,7 +145,6 @@ extension HomeViewController {
                                                      y: self.searchBarContainer.center.y + (translation.y * penis))
             recognizer.setTranslation(.zero, in: self.view)
             
-            print(self.searchBarContainer.center.y, self.snappingBehavior.snapPoint.y - maxDistance)
             if self.searchBarContainer.center.y <= self.snappingBehavior.snapPoint.y - maxDistance + 20.0 {
                 self.showSearchVC()
             }

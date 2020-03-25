@@ -30,6 +30,7 @@ class SearchTarget: Object {
     @objc dynamic var url: String = "kelpie://"
     @objc dynamic var colorHex: String?
     @objc dynamic var lastUsed: Date = .distantPast
+    let history = LinkingObjects(fromType: SearchHistory.self, property: "searchTarget")
     
     convenience init(name: String, url: String, colorHex: String? = nil) {
         self.init()
@@ -48,20 +49,29 @@ class SearchTarget: Object {
     }
     
     // MARK: - Business Logic
-    func executeSearch(query: String) {
+    func executeSearch(query: String, markUsedAt usedAt: Date = Date()) {
         let escaped = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
         let resultURLString = self.url.replacingOccurrences(of: SearchTarget.queryToken, with: escaped)
         guard let resultURL = URL(string: resultURLString) else {
             return
         }
         UIApplication.shared.open(resultURL, options: [:], completionHandler: nil)
-        self.markUsed()
+        self.markUsed(at: usedAt)
+        if let previousHistory = SearchHistory.query(query: query, searchTarget: self) {
+            previousHistory.markUsed(at: usedAt)
+        } else {
+            let newHistory = SearchHistory(searchTarget: self, query: query, lastUsed: usedAt)
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(newHistory)
+            }
+        }
     }
     
-    func markUsed() {
+    func markUsed(at date: Date = Date()) {
         let realm = try! Realm()
         try! realm.write {
-            self.lastUsed = Date()
+            self.lastUsed = date
         }
     }
     

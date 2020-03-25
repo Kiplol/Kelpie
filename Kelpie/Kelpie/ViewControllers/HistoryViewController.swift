@@ -13,14 +13,19 @@ class HistoryViewController: KelpieViewController, UICollectionViewDataSource, U
 UICollectionViewDelegateFlowLayout {
     
     // MARK: -
-    private class var reuseIDSearchHistory: String { return "searchHistory" }
+    private class var cellReuseID: String { return "searchHistory" }
     
     // MARK: - ivars
     private let searchHistories = SearchHistory.allSortedByDate()
     private var searchHistoriesNotificationToken: NotificationToken?
 
     // MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            let cellNib = UINib(nibName: "SearchTargetCollectionViewCell", bundle: Bundle.main)
+            self.collectionView.register(cellNib, forCellWithReuseIdentifier: HistoryViewController.cellReuseID)
+        }
+    }
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -41,9 +46,12 @@ UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HistoryViewController.reuseIDSearchHistory,
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HistoryViewController.cellReuseID,
                                                       for: indexPath)
-        let history = self.searchHistories[indexPath.row]
+        if let searchHistoryUpdatable = cell as? SearchHistoryUpdatable {
+            let history = self.searchHistories[indexPath.row]
+            searchHistoryUpdatable.update(searchHistory: history)
+        }
         return cell
     }
     

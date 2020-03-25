@@ -8,6 +8,10 @@
 
 import RealmSwift
 
+protocol SearchHistoryUpdatable {
+    func update(searchHistory: SearchHistory)
+}
+
 class SearchHistory: Object {
 
     // MARK: - ivars

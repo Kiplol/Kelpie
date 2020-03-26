@@ -51,7 +51,7 @@ class SearchTargetEditViewController: FormViewController {
         self.urlRow = TextFieldRowFormer<FormTextFieldCell>(instantiateType: .Class) { cell in
             cell.formTitleLabel()?.text = "URL"
         }.configure { rowFormer in
-            rowFormer.placeholder = "https://www.google.com/search?q={query}"
+            rowFormer.placeholder = "https://www.google.com/search?q=\(SearchTarget.queryToken)"
             rowFormer.onTextChanged(self.onURLRowTextChanged(_:))
         }
         let urlExplanationRow = LabelRowFormer<FormLabelCell>(instantiateType: .Class) { cell in
@@ -59,7 +59,7 @@ class SearchTargetEditViewController: FormViewController {
             cell.formSubTextLabel()?.lineBreakMode = .byWordWrapping
             cell.formSubTextLabel()?.textAlignment = .left
         }.configure { rowFormer in
-            rowFormer.subText = "Replace your search term with {query} in the URL."
+            rowFormer.subText = "Replace your search term with \(SearchTarget.queryToken) in the URL."
         }
         let section = SectionFormer(rowFormer: self.nameRow, self.urlRow, urlExplanationRow)
         self.former.append(sectionFormer: section)
@@ -80,7 +80,8 @@ class SearchTargetEditViewController: FormViewController {
     
     private func onURLRowTextChanged(_ text: String) {
         self.hasChanges = true
-        if URL(string: text.replacingOccurrences(of: "{query}", with: "test")) != nil {
+        let isValid = self.urlIsValid()
+        if isValid {
             self.urlRow.cell.formTitleLabel()?.attributedText = NSAttributedString(string: "URL")
         } else {
             self.urlRow.cell.formTitleLabel()?.attributedText =
@@ -101,7 +102,7 @@ class SearchTargetEditViewController: FormViewController {
     
     private func urlIsValid() -> Bool {
         guard let string = self.urlRow.cell.formTextField().text else { return false }
-        return URL(string: string) != nil
+        return URL(string: string.replacingOccurrences(of: SearchTarget.queryToken, with: "kelpie")) != nil
     }
     
     // MARK: - Navigation
@@ -121,7 +122,15 @@ class SearchTargetEditViewController: FormViewController {
     }
     
     @objc func doneTapped(_ sender: Any) {
-        
+        guard self.nameIsValid(), self.urlIsValid(), let name = self.nameRow.cell.formTextField().text,
+            let urlString = self.urlRow.cell.formTextField().text else {
+                //@TODO: Error alert
+                return
+        }
+         //@TODO: Dupe check
+        let newSearchTarget = SearchTarget(name: name, url: urlString)
+        newSearchTarget.addToDefaultRealm()
+        self.actuallyDismiss()
     }
 
 }

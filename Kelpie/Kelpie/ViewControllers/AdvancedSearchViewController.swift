@@ -107,7 +107,6 @@ class AdvancedSearchViewController: KelpieViewController {
     // MARK: - Realm
     private func searchTargetsChanged(_ changes: RealmCollectionChange<Results<SearchTarget>>) {
         guard self.isViewLoaded else { return }
-//        self.collectionView.reloadData()
         switch changes {
         case .error, .initial:
             self.collectionView.reloadData()
@@ -116,9 +115,9 @@ class AdvancedSearchViewController: KelpieViewController {
                 self.collectionView.reloadItems(at: modifications.map { IndexPath(row: $0, section: 0) })
                 self.collectionView.insertItems(at: insertions.map { IndexPath(row: $0, section: 0) })
                 self.collectionView.deleteItems(at: deletions.map { IndexPath(row: $0, section: 0) })
-            }) { _ in
+            }, completion: { _ in
                 self.collectionView.reloadData()
-            }
+            })
         }
 
     }

@@ -28,11 +28,22 @@ extension Realm: LaunchPreparable {
         // will automatically perform the migration
         _ = try! Realm()
     }
-    
+}
+
+extension Realm {
     static func makeChanges(_ closure:(() -> Void)) {
         let realm = try! Realm()
         try! realm.write {
             closure()
+        }
+    }
+}
+
+extension Object {
+    func addToDefaultRealm() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(self)
         }
     }
 }

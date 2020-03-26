@@ -6,6 +6,7 @@
 //  Copyright © 2019 Kip. All rights reserved.
 //
 
+import AppCenter
 import RealmSwift
 import UIKit
 
@@ -46,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 fileprivate extension AppDelegate {
     
      func preparePreparablesAtAppLaunch() {
-        let preparables: [LaunchPreparable.Type] = [Realm.self, SearchTarget.self]
+        let preparables: [LaunchPreparable.Type] = [Realm.self, SearchTarget.self, MSAppCenter.self]
         preparables.forEach {
             $0.prepareAtAppLaunch()
         }

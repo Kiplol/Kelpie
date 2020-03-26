@@ -28,6 +28,7 @@
 		37C32ED7231F1CF8008AB2AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */; };
 		37C5C0612345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5C0602345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift */; };
 		37DED314231F447500438BFC /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DED313231F447500438BFC /* ViewUtilities.swift */; };
+		37E25998242D501600951ACE /* AppCenter+Kelpie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E25997242D501600951ACE /* AppCenter+Kelpie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		37C32ED6231F1CF8008AB2AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		37C5C0602345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackingCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		37DED313231F447500438BFC /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
+		37E25997242D501600951ACE /* AppCenter+Kelpie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCenter+Kelpie.swift"; sourceTree = "<group>"; };
 		8507220A4F3D774A4580C59F /* Pods_Kelpie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelpie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB1CF866CFA6C9B9AB2EB7A /* Pods-Kelpie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelpie.debug.xcconfig"; path = "Target Support Files/Pods-Kelpie/Pods-Kelpie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 		37C5C0622345256A002F0DF2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				37E25997242D501600951ACE /* AppCenter+Kelpie.swift */,
 				37B69402241C396E0097A576 /* RealmUtils.swift */,
 				37C5C0602345255F002F0DF2 /* StackingCollectionViewFlowLayout.swift */,
 				371492C22349272700150CC0 /* KipUtils.swift */,
@@ -332,6 +335,7 @@
 				37C32ECC231EE212008AB2AE /* SearchTarget.swift in Sources */,
 				372526FA233872F6001F968A /* SearchTargetCollectionViewCell.swift in Sources */,
 				37DED314231F447500438BFC /* ViewUtilities.swift in Sources */,
+				37E25998242D501600951ACE /* AppCenter+Kelpie.swift in Sources */,
 				37C32EBB231ECB2E008AB2AE /* AdvancedSearchViewController.swift in Sources */,
 				372444342346790E0000B822 /* KelpieViewController.swift in Sources */,
 				37B53688242D223A00EF0FA2 /* SearchTargetEditViewController.swift in Sources */,

@@ -54,7 +54,9 @@ fileprivate extension AppDelegate {
     
     func themeApp() {
         self.window?.tintColor = UIColor.kelpieAccent
-//        UIButton.appearance().tintColor = .kelpieAccent
+        UIBarButtonItem.appearance()
+            .setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.toolbarButton], for: .normal)
+        UIButton.appearance().tintColor = .toolbarButton
     }
     
 }

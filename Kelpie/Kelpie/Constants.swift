@@ -14,5 +14,6 @@ extension UIColor {
     
     class var kelpieAccent: UIColor { return UIColor(named: "Accent")! }
     class var kelpieFilledBackground: UIColor { return UIColor(named: "Filled Background")! }
+    class var toolbarButton: UIColor { return UIColor(named: "Toolbar Button")! }
     
 }

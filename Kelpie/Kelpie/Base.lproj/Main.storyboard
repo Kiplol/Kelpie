@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4u-cD-rT2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4u-cD-rT2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -96,12 +96,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BW-80-uQv">
+                                <rect key="frame" x="354" y="82" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2BW-80-uQv" secondAttribute="height" id="gXM-aL-Eix"/>
+                                    <constraint firstAttribute="width" constant="50" id="xNh-jn-BeA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="iwz-Br-mfi" kind="presentation" id="gCe-2d-qRe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="Filled Background"/>
                         <constraints>
+                            <constraint firstItem="2BW-80-uQv" firstAttribute="centerY" secondItem="3ae-Jt-ijz" secondAttribute="centerY" id="5d7-fk-nEu"/>
                             <constraint firstItem="GJQ-J6-2Rj" firstAttribute="bottom" secondItem="JwD-o1-MKu" secondAttribute="bottom" constant="20" id="8Dx-X8-JKq"/>
                             <constraint firstItem="GJQ-J6-2Rj" firstAttribute="trailing" secondItem="JwD-o1-MKu" secondAttribute="trailing" constant="10" id="Cbc-rO-v7y"/>
                             <constraint firstItem="cxy-Z5-3o9" firstAttribute="centerX" secondItem="aI1-tX-kaT" secondAttribute="centerX" id="J0b-dP-sYY"/>
+                            <constraint firstItem="2BW-80-uQv" firstAttribute="trailing" secondItem="xxb-CN-5hM" secondAttribute="trailing" id="JAf-R4-M7I"/>
                             <constraint firstItem="JwD-o1-MKu" firstAttribute="top" secondItem="cxy-Z5-3o9" secondAttribute="bottom" constant="40" id="NYe-8C-zUp"/>
                             <constraint firstItem="cxy-Z5-3o9" firstAttribute="top" secondItem="3ae-Jt-ijz" secondAttribute="bottom" constant="40" id="VLr-Ju-fwr"/>
                             <constraint firstItem="cxy-Z5-3o9" firstAttribute="leading" secondItem="GJQ-J6-2Rj" secondAttribute="leading" constant="10" id="Z8F-Tb-k6d"/>
@@ -237,7 +269,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-299" y="-1219"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="luv-TD-tXM">
+            <objects>
+                <navigationController id="iwz-Br-mfi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="USN-I8-jc9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Iq0-1T-KwT" kind="relationship" relationship="rootViewController" id="u2u-V3-kzn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFX-K0-Sxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="-569"/>
+        </scene>
+        <!--Search Target Edit View Controller-->
+        <scene sceneID="DQI-o0-9Bu">
+            <objects>
+                <viewController id="Iq0-1T-KwT" customClass="SearchTargetEditViewController" customModule="Kelpie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DdK-Hp-ebw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Nci-Xf-H0F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AYk-f1-lmM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcR-y3-5E7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="-569"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="HQx-wb-UKg">
@@ -278,12 +342,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vc-3i-zQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.985507246377" y="-589.28571428571422"/>
+            <point key="canvasLocation" x="622" y="-1204"/>
         </scene>
     </scenes>
     <resources>
-        <image name="clear.fill" catalog="system" width="64" height="56"/>
-        <image name="rectangle.and.paperclip" catalog="system" width="64" height="50"/>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="rectangle.and.paperclip" catalog="system" width="128" height="100"/>
         <namedColor name="Filled Background">
             <color red="0.75294117647058822" green="0.84313725490196079" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

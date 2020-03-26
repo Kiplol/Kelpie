@@ -1,4 +1,5 @@
 PODS:
+  - Former (1.8.1)
   - Gestalt (2.0.1)
   - Hue (5.0.0)
   - Ji (5.0.0)
@@ -14,6 +15,7 @@ PODS:
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
+  - Former
   - Gestalt (~> 2.0.0)
   - Hue
   - KeyboardObserver (~> 2.1)
@@ -24,6 +26,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Former
     - Gestalt
     - Hue
     - Ji
@@ -35,6 +38,7 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Former: f36edb5c1ac03755f8d6d03b26044b62de8c0b2d
   Gestalt: dd2112f16576ee691a0ca381b0223464d5f123a3
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
   Ji: d795fed288fe78658b404c88946d753b17d8d7f4
@@ -45,6 +49,6 @@ SPEC CHECKSUMS:
   SPStorkController: d809adb3e333ec07760f8bf1b4c628a2801675ac
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 28a74c26ad5a151eafc65939f0b356d917ba867c
+PODFILE CHECKSUM: 71b693b720eab358af88195f5f5a7e1f131c7b42
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

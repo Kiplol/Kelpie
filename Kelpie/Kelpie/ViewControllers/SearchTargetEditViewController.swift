@@ -22,6 +22,8 @@ class SearchTargetEditViewController: FormViewController {
     private var hasChanges = false
     private var nameRow: TextFieldRowFormer<FormTextFieldCell>!
     private var urlRow: TextFieldRowFormer<FormTextFieldCell>!
+    private var colorRow: LabelRowFormer<FormLabelCell>!
+    private var color: UIColor = .kelpieAccent
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -61,7 +63,12 @@ class SearchTargetEditViewController: FormViewController {
         }.configure { rowFormer in
             rowFormer.subText = "Replace your search term with \(SearchTarget.queryToken) in the URL."
         }
-        let section = SectionFormer(rowFormer: self.nameRow, self.urlRow, urlExplanationRow)
+        self.colorRow = LabelRowFormer<FormLabelCell>(instantiateType: .Class, cellSetup: { cell in
+            cell.formSubTextLabel()?.backgroundColor = self.color
+        }).onSelected(self.onColorRowTapped(_:)).configure(handler: { rowFormer in
+            rowFormer.text = "Color"
+        })
+        let section = SectionFormer(rowFormer: self.nameRow, self.urlRow, urlExplanationRow, self.colorRow)
         self.former.append(sectionFormer: section)
     }
     
@@ -89,10 +96,15 @@ class SearchTargetEditViewController: FormViewController {
         }
     }
     
+    private func onColorRowTapped(_ sender: Any) {
+        
+    }
+    
     private func prepopulate() {
         guard self.isViewLoaded, let searchTarget = self.searchTarget else { return }
         self.nameRow.cell.textField.text = searchTarget.name
         self.urlRow.cell.textField.text = searchTarget.url
+        self.colorRow.cell.formSubTextLabel()?.backgroundColor = self.color
     }
     
     // MARK: - Validation
@@ -127,7 +139,17 @@ class SearchTargetEditViewController: FormViewController {
                 //@TODO: Error alert
                 return
         }
-         //@TODO: Dupe check
+         // Dupe check
+        guard SearchTarget.named(name) == nil else {
+            let dupeAlert = UIAlertController(title: "Duplicate",
+                                              message: "There is already a search target named '\(name)'.  Please choose a different name.",
+                preferredStyle: .alert)
+            dupeAlert.addAction(UIAlertAction(title: "Ugh fine", style: .default, handler: { [weak self] _ in
+                self?.nameRow.cell.textField.becomeFirstResponder()
+            }))
+            self.present(dupeAlert, animated: true, completion: nil)
+            return
+        }
         let newSearchTarget = SearchTarget(name: name, url: urlString)
         newSearchTarget.addToDefaultRealm()
         self.actuallyDismiss()

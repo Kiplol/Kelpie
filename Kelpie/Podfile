@@ -12,6 +12,7 @@ end
 
 target 'Kelpie' do
   shared_pods
+  pod 'ChromaColorPicker'
   pod 'Former'
   pod 'KeyboardObserver', '~> 2.1'
   pod 'ReadabilityKit'

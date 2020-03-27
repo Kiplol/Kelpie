@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Kelpie/Pods-Kelpie-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework
 ${BUILT_PRODUCTS_DIR}/Former/Former.framework
 ${BUILT_PRODUCTS_DIR}/Gestalt/Gestalt.framework
 ${BUILT_PRODUCTS_DIR}/Hue/Hue.framework

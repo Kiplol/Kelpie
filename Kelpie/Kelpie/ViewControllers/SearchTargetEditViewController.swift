@@ -97,7 +97,8 @@ class SearchTargetEditViewController: FormViewController {
     }
     
     private func onColorRowTapped(_ sender: Any) {
-        
+        let colorVC = ColorPickerViewController()
+        self.show(colorVC, sender: self)
     }
     
     private func prepopulate() {

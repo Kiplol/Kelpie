@@ -161,6 +161,11 @@ class SearchTargetEditViewController: FormViewController {
 extension SearchTargetEditViewController: UIAdaptivePresentationControllerDelegate {
     
     func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
+        if let navigationController = self.navigationController {
+            if navigationController.topViewController != self {
+                return false
+            }
+        }
         return !self.hasChanges
     }
     

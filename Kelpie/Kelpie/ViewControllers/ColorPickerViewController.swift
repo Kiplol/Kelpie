@@ -22,6 +22,8 @@ class ColorPickerViewController: KelpieViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Pick a Color"
+        self.view.backgroundColor = .systemBackground
     }
 
 }

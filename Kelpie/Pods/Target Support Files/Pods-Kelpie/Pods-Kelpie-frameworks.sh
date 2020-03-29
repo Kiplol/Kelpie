@@ -197,7 +197,6 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Former/Former.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Gestalt/Gestalt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
@@ -209,7 +208,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Former/Former.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Gestalt/Gestalt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"

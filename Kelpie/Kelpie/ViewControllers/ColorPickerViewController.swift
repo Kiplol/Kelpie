@@ -13,17 +13,21 @@ class ColorPickerViewController: KelpieViewController {
     // MARK: - ivars
     var color: UIColor = .kelpieAccent
     
-    // MARK: - Initializers
-    convenience init(color: UIColor) {
-        self.init()
-        self.color = color
+    // MARK: - Helpers
+    class func with(color: UIColor?) -> ColorPickerViewController {
+        guard let vc = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "colorPicker") as? ColorPickerViewController else {
+            fatalError("Could not instantiate a \(self) from Storyboard.")
+        }
+        if let color = color {
+            vc.color = color
+        }
+        return vc
     }
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Pick a Color"
-        self.view.backgroundColor = .systemBackground
     }
 
 }

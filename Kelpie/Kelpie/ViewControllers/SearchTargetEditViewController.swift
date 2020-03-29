@@ -40,6 +40,8 @@ class SearchTargetEditViewController: FormViewController {
                                             action: #selector(SearchTargetEditViewController.doneTapped(_:)))
         self.navigationItem.leftBarButtonItem = cancelButton
         self.navigationItem.rightBarButtonItem = confirmButton
+        
+        
     }
     
     // MARK: - Form
@@ -97,7 +99,7 @@ class SearchTargetEditViewController: FormViewController {
     }
     
     private func onColorRowTapped(_ sender: Any) {
-        let colorVC = ColorPickerViewController()
+        let colorVC = ColorPickerViewController.with(color: self.color)
         self.show(colorVC, sender: self)
     }
     

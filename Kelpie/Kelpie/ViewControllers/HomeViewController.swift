@@ -90,6 +90,7 @@ class HomeViewController: UIViewController {
     fileprivate func showSearchVC() {
         let searchVC = AdvancedSearchViewController.fromStoryboard()
         searchVC.initialSearchQuery = self.searchBar.text
+
         self.present(searchVC, animated: true, completion: nil)
     }
     

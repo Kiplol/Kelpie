@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVT-Kt-e3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="-568.52678571428567"/>
+            <point key="canvasLocation" x="-299" y="-569"/>
         </scene>
         <!--Advanced Search View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -285,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFX-K0-Sxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="-569"/>
+            <point key="canvasLocation" x="774" y="-1219"/>
         </scene>
         <!--Search Target Edit View Controller-->
         <scene sceneID="DQI-o0-9Bu">
@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcR-y3-5E7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="-569"/>
+            <point key="canvasLocation" x="1565" y="-1219"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="HQx-wb-UKg">
@@ -342,7 +342,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vc-3i-zQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="-1204"/>
+            <point key="canvasLocation" x="349" y="-569"/>
+        </scene>
+        <!--Color Picker View Controller-->
+        <scene sceneID="DkH-Jx-Eq0">
+            <objects>
+                <viewController storyboardIdentifier="colorPicker" id="sB4-Ye-Mhj" customClass="ColorPickerViewController" customModule="Kelpie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wLz-z1-KfR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-k4-HQZ">
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JGc-k4-HQZ" secondAttribute="height" id="wpd-oa-tru"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JGc-k4-HQZ" firstAttribute="centerY" secondItem="wLz-z1-KfR" secondAttribute="centerY" id="Nc8-M7-maU"/>
+                            <constraint firstItem="JGc-k4-HQZ" firstAttribute="leading" secondItem="Drd-VU-coq" secondAttribute="leading" constant="40" id="OyP-7K-Z0K"/>
+                            <constraint firstItem="Drd-VU-coq" firstAttribute="trailing" secondItem="JGc-k4-HQZ" secondAttribute="trailing" constant="40" id="Si6-aI-5XH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Drd-VU-coq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqj-zn-v3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="151"/>
         </scene>
     </scenes>
     <resources>

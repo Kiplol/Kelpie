@@ -7,7 +7,6 @@ PODS:
   - AppCenter/Core (3.0.0)
   - AppCenter/Crashes (3.0.0):
     - AppCenter/Core
-  - ColorSlider (4.4)
   - Former (1.8.1)
   - Gestalt (2.0.1)
   - Hue (5.0.0)
@@ -25,7 +24,6 @@ PODS:
 
 DEPENDENCIES:
   - AppCenter
-  - ColorSlider (~> 4.4)
   - Former
   - Gestalt (~> 2.0.0)
   - Hue
@@ -38,7 +36,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppCenter
-    - ColorSlider
     - Former
     - Gestalt
     - Hue
@@ -52,7 +49,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppCenter: 7a0bbe928d07467ac8b2d7f6f2a675872a6471d8
-  ColorSlider: 9a888e65b871fa1e6a26fadebf4931c949935681
   Former: f36edb5c1ac03755f8d6d03b26044b62de8c0b2d
   Gestalt: dd2112f16576ee691a0ca381b0223464d5f123a3
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
@@ -64,6 +60,6 @@ SPEC CHECKSUMS:
   SPStorkController: d809adb3e333ec07760f8bf1b4c628a2801675ac
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 0dfcebaa5aec5770a35f92a16428fd786cf37179
+PODFILE CHECKSUM: 0fc9f2039870f02b167c90a283ddf340554d1f18
 
 COCOAPODS: 1.9.1
